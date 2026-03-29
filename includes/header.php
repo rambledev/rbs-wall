@@ -4,375 +4,572 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="พี่หญิง ล้อมรั้วทั่วไทย บริการรับเหมาทำรั้วครบวงจร รั้วลวดหนาม รั้วเมทัลชีท รั้วคาวบอย กำแพงกั้นดิน ติดตั้งประตูบานเลื่อน-บานสวิง ราคายุติธรรม" />
-  <meta name="keywords" content="รั้วลวดหนาม,รั้วเมทัลชีท,รั้วคาวบอย,กำแพงกั้นดิน,ติดตั้งประตู,บานเลื่อน,พี่หญิงล้อมรั้ว" />
+  <meta name="keywords" content="รั้วลวดหนาม,รั้วเมทัลชีท,รั้วคาวบอย,กำแพงกั้นดิน,ติดตั้งประตู,พี่หญิงล้อมรั้ว" />
   <meta property="og:title" content="<?= htmlspecialchars($currentTitle) ?>" />
   <meta property="og:description" content="บริการรับเหมาทำรั้วครบวงจร งานคุณภาพ ราคายุติธรรม ประเมินหน้างานฟรี" />
   <meta property="og:type" content="website" />
   <title><?= htmlspecialchars($currentTitle) ?></title>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts: Sarabun (Thai) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
-    /* ============================================================
-       THEME VARIABLES
-    ============================================================ */
-    :root {
-      /* Theme 1: Dark Industrial (default) */
-      --bg-primary:   #111111;
-      --bg-secondary: #161616;
-      --bg-card:      #1e1e1e;
-      --bg-footer:    #0a0a0a;
-      --bg-navbar:    rgba(10,10,10,0.97);
-      --bg-mobile:    rgba(10,10,10,0.98);
-      --accent:       #f97316;
-      --accent-dark:  #ea580c;
-      --accent-rgb:   249,115,22;
-      --text:         #ffffff;
-      --text-muted:   #9ca3af;
-      --text-subtle:  #6b7280;
-      --border:       rgba(255,255,255,0.05);
-      --border-light: rgba(255,255,255,0.1);
-      --stripe:       rgba(249,115,22,0.03);
-      --glow:         rgba(249,115,22,0.06);
-      --overlay:      rgba(0,0,0,0.85);
-      --card-shadow:  rgba(249,115,22,0.15);
-    }
+/* ================================================================
+   DESIGN TOKENS – CSS VARIABLES
+================================================================ */
 
-    /* Theme 2: Light Professional (white + blue) */
-    body.theme-2 {
-      --bg-primary:   #f1f5f9;
-      --bg-secondary: #ffffff;
-      --bg-card:      #ffffff;
-      --bg-footer:    #1e293b;
-      --bg-navbar:    rgba(255,255,255,0.97);
-      --bg-mobile:    rgba(248,250,252,0.99);
-      --accent:       #2563eb;
-      --accent-dark:  #1d4ed8;
-      --accent-rgb:   37,99,235;
-      --text:         #0f172a;
-      --text-muted:   #475569;
-      --text-subtle:  #94a3b8;
-      --border:       rgba(0,0,0,0.07);
-      --border-light: rgba(0,0,0,0.12);
-      --stripe:       rgba(37,99,235,0.02);
-      --glow:         rgba(37,99,235,0.04);
-      --overlay:      rgba(0,0,0,0.7);
-      --card-shadow:  rgba(37,99,235,0.12);
-    }
+/* ── Style A: Industrial (default) ── */
+:root {
+  --font-body:      'Sarabun', sans-serif;
+  --font-heading:   'Sarabun', sans-serif;
 
-    /* Theme 3: Navy Premium (dark navy + gold) */
-    body.theme-3 {
-      --bg-primary:   #0b1220;
-      --bg-secondary: #0f1a2e;
-      --bg-card:      #152035;
-      --bg-footer:    #060c18;
-      --bg-navbar:    rgba(6,12,24,0.97);
-      --bg-mobile:    rgba(11,18,32,0.99);
-      --accent:       #d97706;
-      --accent-dark:  #b45309;
-      --accent-rgb:   217,119,6;
-      --text:         #f8fafc;
-      --text-muted:   #94a3b8;
-      --text-subtle:  #64748b;
-      --border:       rgba(255,255,255,0.06);
-      --border-light: rgba(255,255,255,0.1);
-      --stripe:       rgba(217,119,6,0.025);
-      --glow:         rgba(217,119,6,0.06);
-      --overlay:      rgba(0,0,0,0.88);
-      --card-shadow:  rgba(217,119,6,0.14);
-    }
+  --bg-primary:     #111111;
+  --bg-secondary:   #161616;
+  --bg-card:        #1e1e1e;
+  --bg-footer:      #0a0a0a;
+  --bg-navbar:      rgba(10,10,10,0.97);
+  --accent:         #f97316;
+  --accent-dark:    #ea580c;
+  --accent-rgb:     249,115,22;
+  --text:           #ffffff;
+  --text-muted:     #9ca3af;
+  --text-subtle:    #6b7280;
+  --border:         rgba(255,255,255,0.05);
+  --border-light:   rgba(255,255,255,0.1);
+  --radius-card:    0px;
+  --radius-btn:     0px;
+  --radius-img:     0px;
+  --shadow-card:    none;
+  --shadow-hover:   0 0 0 1px var(--accent), 0 8px 32px rgba(var(--accent-rgb),0.18);
+  --hero-overlay:   radial-gradient(ellipse 80% 60% at 50% 40%, rgba(249,115,22,0.06) 0%, transparent 70%);
+  --stripe:         rgba(249,115,22,0.025);
+  --card-glass:     none;
+  --heading-style:  normal;
+}
 
-    /* ============================================================
-       BASE STYLES
-    ============================================================ */
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Sarabun', sans-serif;
-      background-color: var(--bg-primary);
-      color: var(--text);
-      transition: background-color 0.35s ease, color 0.35s ease;
-    }
+/* ── Style A variant: Light Blue ── */
+body.a-light {
+  --bg-primary:    #f1f5f9;
+  --bg-secondary:  #ffffff;
+  --bg-card:       #ffffff;
+  --bg-footer:     #1e293b;
+  --bg-navbar:     rgba(255,255,255,0.97);
+  --accent:        #2563eb;
+  --accent-dark:   #1d4ed8;
+  --accent-rgb:    37,99,235;
+  --text:          #0f172a;
+  --text-muted:    #475569;
+  --text-subtle:   #94a3b8;
+  --border:        rgba(0,0,0,0.07);
+  --border-light:  rgba(0,0,0,0.12);
+  --hero-overlay:  radial-gradient(ellipse 80% 60% at 50% 40%, rgba(37,99,235,0.06) 0%, transparent 70%);
+  --stripe:        rgba(37,99,235,0.02);
+}
 
-    /* ============================================================
-       ACCENT COLOR OVERRIDES (Tailwind orange → CSS var)
-    ============================================================ */
-    .accent-bg  { background-color: var(--accent) !important; }
-    .accent-text { color: var(--accent) !important; }
-    .accent-border { border-color: var(--accent) !important; }
+/* ── Style A variant: Navy Gold ── */
+body.a-navy {
+  --bg-primary:    #0b1220;
+  --bg-secondary:  #0f1a2e;
+  --bg-card:       #152035;
+  --bg-footer:     #060c18;
+  --bg-navbar:     rgba(6,12,24,0.97);
+  --accent:        #d97706;
+  --accent-dark:   #b45309;
+  --accent-rgb:    217,119,6;
+  --text:          #f8fafc;
+  --text-muted:    #94a3b8;
+  --text-subtle:   #64748b;
+  --border:        rgba(255,255,255,0.06);
+  --border-light:  rgba(255,255,255,0.1);
+  --hero-overlay:  radial-gradient(ellipse 80% 60% at 50% 40%, rgba(217,119,6,0.07) 0%, transparent 70%);
+  --stripe:        rgba(217,119,6,0.025);
+}
 
-    /* All orange-500 Tailwind classes → accent */
-    body .bg-orange-500, body [class*="bg-orange-5"] { background-color: var(--accent) !important; }
-    body .bg-orange-600, body [class*="bg-orange-6"],
-    body .hover\:bg-orange-600:hover             { background-color: var(--accent-dark) !important; }
-    body .text-orange-500, body [class*="text-orange-5"] { color: var(--accent) !important; }
-    body .text-orange-400, body [class*="text-orange-4"] { color: var(--accent) !important; }
-    body .border-orange-500, body [class*="border-orange-5"] { border-color: var(--accent) !important; }
-    body .border-t-4.border-orange-500 { border-top-color: var(--accent) !important; }
+/* ================================================================
+   STYLE B – MODERN ROUNDED
+================================================================ */
+body.b-dark {
+  --font-body:     'Prompt', sans-serif;
+  --font-heading:  'Prompt', sans-serif;
+  --bg-primary:    #0f172a;
+  --bg-secondary:  #1e293b;
+  --bg-card:       #1e293b;
+  --bg-footer:     #020617;
+  --bg-navbar:     rgba(15,23,42,0.96);
+  --accent:        #6366f1;
+  --accent-dark:   #4f46e5;
+  --accent-rgb:    99,102,241;
+  --text:          #f1f5f9;
+  --text-muted:    #94a3b8;
+  --text-subtle:   #64748b;
+  --border:        rgba(99,102,241,0.15);
+  --border-light:  rgba(99,102,241,0.2);
+  --radius-card:   20px;
+  --radius-btn:    9999px;
+  --radius-img:    14px;
+  --shadow-card:   0 4px 24px rgba(0,0,0,0.25);
+  --shadow-hover:  0 0 0 2px var(--accent), 0 16px 48px rgba(var(--accent-rgb),0.25);
+  --hero-overlay:  radial-gradient(ellipse 90% 70% at 50% -10%, rgba(99,102,241,0.25) 0%, transparent 65%);
+  --stripe:        rgba(99,102,241,0.03);
+}
+body.b-light {
+  --font-body:     'Prompt', sans-serif;
+  --font-heading:  'Prompt', sans-serif;
+  --bg-primary:    #f8fafc;
+  --bg-secondary:  #ffffff;
+  --bg-card:       #ffffff;
+  --bg-footer:     #0f172a;
+  --bg-navbar:     rgba(248,250,252,0.97);
+  --accent:        #6366f1;
+  --accent-dark:   #4f46e5;
+  --accent-rgb:    99,102,241;
+  --text:          #0f172a;
+  --text-muted:    #475569;
+  --text-subtle:   #94a3b8;
+  --border:        rgba(0,0,0,0.06);
+  --border-light:  rgba(0,0,0,0.1);
+  --radius-card:   20px;
+  --radius-btn:    9999px;
+  --radius-img:    14px;
+  --shadow-card:   0 4px 24px rgba(99,102,241,0.08);
+  --shadow-hover:  0 0 0 2px var(--accent), 0 16px 48px rgba(var(--accent-rgb),0.18);
+  --hero-overlay:  radial-gradient(ellipse 90% 70% at 50% -10%, rgba(99,102,241,0.12) 0%, transparent 65%);
+  --stripe:        rgba(99,102,241,0.02);
+}
 
-    /* ============================================================
-       CARD BACKGROUNDS
-    ============================================================ */
-    body .bg-\[#1e1e1e\],
-    body .bg-\[#1a1a1a\],
-    body .bg-\[#161616\],
-    body .bg-\[#181818\],
-    body .bg-\[#1c1c1c\],
-    body .bg-\[#171717\],
-    body .bg-\[#191919\] { background-color: var(--bg-card) !important; }
+/* ================================================================
+   STYLE C – BOLD PREMIUM
+================================================================ */
+body.c-dark {
+  --font-body:     'Prompt', sans-serif;
+  --font-heading:  'Prompt', sans-serif;
+  --bg-primary:    #09090b;
+  --bg-secondary:  #0d0d10;
+  --bg-card:       rgba(255,255,255,0.04);
+  --bg-footer:     #000000;
+  --bg-navbar:     rgba(9,9,11,0.92);
+  --accent:        #a855f7;
+  --accent-dark:   #9333ea;
+  --accent-rgb:    168,85,247;
+  --text:          #fafafa;
+  --text-muted:    #a1a1aa;
+  --text-subtle:   #71717a;
+  --border:        rgba(168,85,247,0.15);
+  --border-light:  rgba(168,85,247,0.25);
+  --radius-card:   16px;
+  --radius-btn:    8px;
+  --radius-img:    12px;
+  --shadow-card:   0 0 0 1px rgba(168,85,247,0.12), 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-hover:  0 0 0 2px var(--accent), 0 20px 60px rgba(var(--accent-rgb),0.3);
+  --hero-overlay:  radial-gradient(ellipse 100% 80% at 50% -5%, rgba(168,85,247,0.3) 0%, rgba(168,85,247,0.05) 50%, transparent 70%);
+  --stripe:        rgba(168,85,247,0.04);
+  --heading-style: gradient;
+}
+body.c-light {
+  --font-body:     'Prompt', sans-serif;
+  --font-heading:  'Prompt', sans-serif;
+  --bg-primary:    #fafafa;
+  --bg-secondary:  #f4f4f5;
+  --bg-card:       rgba(255,255,255,0.85);
+  --bg-footer:     #09090b;
+  --bg-navbar:     rgba(250,250,250,0.92);
+  --accent:        #7c3aed;
+  --accent-dark:   #6d28d9;
+  --accent-rgb:    124,58,237;
+  --text:          #09090b;
+  --text-muted:    #52525b;
+  --text-subtle:   #a1a1aa;
+  --border:        rgba(124,58,237,0.12);
+  --border-light:  rgba(124,58,237,0.2);
+  --radius-card:   16px;
+  --radius-btn:    8px;
+  --radius-img:    12px;
+  --shadow-card:   0 4px 20px rgba(124,58,237,0.08), 0 1px 4px rgba(0,0,0,0.05);
+  --shadow-hover:  0 0 0 2px var(--accent), 0 16px 48px rgba(var(--accent-rgb),0.2);
+  --hero-overlay:  radial-gradient(ellipse 100% 70% at 50% -10%, rgba(124,58,237,0.15) 0%, transparent 60%);
+  --stripe:        rgba(124,58,237,0.025);
+  --heading-style: gradient;
+}
 
-    /* ============================================================
-       TEXT OVERRIDES (for Theme 2 light)
-    ============================================================ */
-    body.theme-2 .text-white  { color: var(--text) !important; }
-    body.theme-2 .text-gray-300 { color: #374151 !important; }
-    body.theme-2 .text-gray-400 { color: var(--text-muted) !important; }
-    body.theme-2 .text-gray-500 { color: #6b7280 !important; }
-    body.theme-2 .text-gray-600 { color: #9ca3af !important; }
+/* ================================================================
+   BASE STYLES
+================================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
 
-    /* ============================================================
-       BORDER OVERRIDES (for Theme 2 light)
-    ============================================================ */
-    body.theme-2 .border-white\/5  { border-color: rgba(0,0,0,0.07) !important; }
-    body.theme-2 .border-white\/10 { border-color: rgba(0,0,0,0.12) !important; }
-    body.theme-2 .border-white\/20 { border-color: rgba(0,0,0,0.16) !important; }
-    body.theme-2 .border-white\/40 { border-color: rgba(0,0,0,0.25) !important; }
+/* ================================================================
+   ACCENT COLOR OVERRIDES (Tailwind → CSS var)
+================================================================ */
+body .bg-orange-500  { background-color: var(--accent)      !important; }
+body .bg-orange-600  { background-color: var(--accent-dark)  !important; }
+body .hover\:bg-orange-600:hover { background-color: var(--accent-dark) !important; }
+body .text-orange-500, body .text-orange-400 { color: var(--accent) !important; }
+body .border-orange-500 { border-color: var(--accent) !important; }
+body .border-t-4.border-orange-500 { border-top-color: var(--accent) !important; }
 
-    /* Stats row bg for theme 2 */
-    body.theme-2 #hero { background-color: #1e293b !important; }
+/* Card dark bg classes → CSS var */
+body .bg-\[#1e1e1e\],body .bg-\[#1a1a1a\],body .bg-\[#161616\],
+body .bg-\[#181818\],body .bg-\[#1c1c1c\],body .bg-\[#171717\],
+body .bg-\[#191919\] { background-color: var(--bg-card) !important; }
 
-    /* Input fields theme 2 */
-    body.theme-2 input,
-    body.theme-2 textarea,
-    body.theme-2 select {
-      color: var(--text) !important;
-      background-color: #f8fafc !important;
-      border-color: rgba(0,0,0,0.15) !important;
-    }
-    body.theme-2 input::placeholder,
-    body.theme-2 textarea::placeholder { color: #9ca3af !important; }
+/* ================================================================
+   LIGHT THEME – TEXT / BORDER OVERRIDES
+================================================================ */
+body.a-light, body.b-light, body.c-light {
+  /* Text */
+  --tw-text-opacity: 1;
+}
+body.a-light .text-white,
+body.b-light .text-white,
+body.c-light .text-white     { color: var(--text) !important; }
 
-    /* ============================================================
-       COMPONENT STYLES
-    ============================================================ */
-    /* Fade-in on scroll */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+body.a-light .text-gray-300,
+body.b-light .text-gray-300,
+body.c-light .text-gray-300  { color: #374151 !important; }
 
-    /* Navbar */
-    .navbar-scrolled {
-      background-color: var(--bg-navbar) !important;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
-    }
-    body.theme-2 .navbar-scrolled {
-      box-shadow: 0 2px 20px rgba(0,0,0,0.12);
-    }
+body.a-light .text-gray-400,
+body.b-light .text-gray-400,
+body.c-light .text-gray-400  { color: var(--text-muted) !important; }
 
-    /* Mobile menu */
-    #mobile-menu { display: none; }
-    #mobile-menu.open { display: block; }
+body.a-light .text-gray-500,
+body.b-light .text-gray-500,
+body.c-light .text-gray-500  { color: #6b7280 !important; }
 
-    /* Section title underline */
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 56px;
-      height: 4px;
-      background: var(--accent);
-      margin-top: 12px;
-    }
-    .section-title.center::after {
-      margin-left: auto;
-      margin-right: auto;
-    }
+body.a-light .text-gray-600,
+body.b-light .text-gray-600,
+body.c-light .text-gray-600  { color: #9ca3af !important; }
 
-    /* Service card hover */
-    .service-card {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .service-card:hover {
-      box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(var(--accent-rgb),0.15);
-      transform: translateY(-4px);
-    }
-    body.theme-2 .service-card {
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    }
-    body.theme-2 .service-card:hover {
-      box-shadow: 0 0 0 2px var(--accent), 0 8px 32px rgba(var(--accent-rgb),0.12);
-    }
+body.a-light .border-white\/5,
+body.b-light .border-white\/5,
+body.c-light .border-white\/5  { border-color: rgba(0,0,0,0.07) !important; }
 
-    /* Lightbox */
-    #lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-    }
-    #lightbox.open { display: flex; }
-    #lightbox img {
-      max-width: 90vw;
-      max-height: 85vh;
-      object-fit: contain;
-      border: 2px solid var(--accent);
-    }
+body.a-light .border-white\/10,
+body.b-light .border-white\/10,
+body.c-light .border-white\/10 { border-color: rgba(0,0,0,0.12) !important; }
 
-    /* Gallery hover */
-    .gallery-item {
-      cursor: pointer;
-      overflow: hidden;
-      position: relative;
-    }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(var(--accent-rgb),0.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .gallery-item img {
-      transition: transform 0.4s ease;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .gallery-item:hover img { transform: scale(1.06); }
+body.a-light .border-white\/20,
+body.b-light .border-white\/20,
+body.c-light .border-white\/20 { border-color: rgba(0,0,0,0.16) !important; }
 
-    /* ============================================================
-       THEME SWITCHER BAR
-    ============================================================ */
-    #theme-bar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 12px;
-      font-family: 'Sarabun', sans-serif;
-      background: rgba(0,0,0,0.88);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      transition: background 0.3s ease;
-    }
-    body.theme-2 #theme-bar {
-      background: rgba(30,41,59,0.95);
-    }
-    body.theme-3 #theme-bar {
-      background: rgba(6,12,24,0.95);
-    }
-    #theme-bar .bar-label {
-      color: rgba(255,255,255,0.5);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .theme-dot-btn {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 3px 10px 3px 6px;
-      border-radius: 20px;
-      border: 1.5px solid transparent;
-      cursor: pointer;
-      background: rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.55);
-      font-size: 11px;
-      font-family: 'Sarabun', sans-serif;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-    .theme-dot-btn:hover {
-      background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.9);
-    }
-    .theme-dot-btn.active {
-      border-color: rgba(255,255,255,0.4);
-      background: rgba(255,255,255,0.12);
-      color: #ffffff;
-    }
-    .theme-dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      display: block;
-    }
-    .theme-divider {
-      width: 1px;
-      height: 16px;
-      background: rgba(255,255,255,0.12);
-    }
-  </style>
+body.a-light .border-white\/40,
+body.b-light .border-white\/40,
+body.c-light .border-white\/40 { border-color: rgba(0,0,0,0.25) !important; }
+
+body.a-light input, body.b-light input, body.c-light input,
+body.a-light textarea, body.b-light textarea, body.c-light textarea,
+body.a-light select, body.b-light select, body.c-light select {
+  color: var(--text) !important;
+  background-color: #f8fafc !important;
+  border-color: rgba(0,0,0,0.12) !important;
+}
+body.a-light input::placeholder,
+body.b-light input::placeholder,
+body.c-light input::placeholder,
+body.a-light textarea::placeholder,
+body.b-light textarea::placeholder,
+body.c-light textarea::placeholder { color: #9ca3af !important; }
+
+/* Hero bg for light a */
+body.a-light #hero { background-color: #1e293b !important; }
+
+/* ================================================================
+   STYLE B – COMPONENT OVERRIDES
+================================================================ */
+body.b-dark .service-card,
+body.b-light .service-card {
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-card) !important;
+  overflow: hidden;
+}
+body.b-dark .service-card:hover,
+body.b-light .service-card:hover {
+  box-shadow: var(--shadow-hover) !important;
+  transform: translateY(-6px) !important;
+}
+body.b-dark .gallery-item,
+body.b-light .gallery-item {
+  border-radius: var(--radius-card) !important;
+}
+/* Pill buttons in B */
+body.b-dark a[style*="background-color: var(--accent)"],
+body.b-light a[style*="background-color: var(--accent)"] {
+  border-radius: var(--radius-btn) !important;
+}
+/* Hero gradient */
+body.b-dark #hero,
+body.b-light #hero {
+  background-image: var(--hero-overlay) !important;
+}
+/* Nav button pill */
+body.b-dark nav a[href*="tel"],
+body.b-light nav a[href*="tel"] {
+  border-radius: var(--radius-btn) !important;
+}
+/* B light border override */
+body.b-light .border-white\/5  { border-color: rgba(99,102,241,0.12) !important; }
+body.b-light .border-white\/10 { border-color: rgba(99,102,241,0.18) !important; }
+
+/* ================================================================
+   STYLE C – COMPONENT OVERRIDES (Glassmorphism + Gradient)
+================================================================ */
+body.c-dark .service-card,
+body.c-light .service-card {
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+body.c-dark .service-card:hover,
+body.c-light .service-card:hover {
+  box-shadow: var(--shadow-hover) !important;
+  transform: translateY(-6px) !important;
+  border-color: var(--accent) !important;
+}
+/* Gradient text headings */
+body.c-dark h1,
+body.c-dark h2,
+body.c-light h1,
+body.c-light h2 {
+  background: linear-gradient(130deg, var(--text) 0%, var(--accent) 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* Keep section subtitle small text normal */
+body.c-dark p, body.c-light p { -webkit-text-fill-color: unset; }
+
+/* Gradient fill buttons */
+body.c-dark a[style*="background-color: var(--accent)"],
+body.c-dark button#submit-btn,
+body.c-light a[style*="background-color: var(--accent)"],
+body.c-light button#submit-btn {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%) !important;
+  border-radius: var(--radius-btn) !important;
+  box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.4) !important;
+}
+/* Gallery items */
+body.c-dark .gallery-item,
+body.c-light .gallery-item {
+  border-radius: var(--radius-card) !important;
+}
+/* Hero gradient overlay */
+body.c-dark #hero,
+body.c-light #hero {
+  background-image: var(--hero-overlay) !important;
+}
+/* Section bg glass for C */
+body.c-dark .bg-\[#1e1e1e\],
+body.c-dark .bg-\[#1a1a1a\] {
+  background: rgba(255,255,255,0.04) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(168,85,247,0.12) !important;
+  border-radius: var(--radius-card) !important;
+}
+body.c-light .bg-\[#1e1e1e\],
+body.c-light .bg-\[#1a1a1a\] {
+  background: rgba(255,255,255,0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(124,58,237,0.1) !important;
+  border-radius: var(--radius-card) !important;
+}
+/* Nav blur for C */
+body.c-dark nav, body.c-light nav {
+  backdrop-filter: blur(20px) !important;
+}
+body.c-dark .navbar-scrolled,
+body.c-light .navbar-scrolled {
+  background: rgba(9,9,11,0.85) !important;
+  border-bottom: 1px solid rgba(168,85,247,0.15) !important;
+}
+body.c-light .navbar-scrolled {
+  background: rgba(250,250,250,0.88) !important;
+  border-bottom: 1px solid rgba(124,58,237,0.12) !important;
+}
+
+/* ================================================================
+   COMMON COMPONENTS
+================================================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+.navbar-scrolled {
+  background-color: var(--bg-navbar) !important;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+#mobile-menu         { display: none; }
+#mobile-menu.open    { display: block; }
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--accent);
+  margin-top: 12px;
+  border-radius: 2px;
+}
+.section-title.center::after { margin-left: auto; margin-right: auto; }
+
+.service-card { transition: transform 0.28s ease, box-shadow 0.28s ease; }
+.service-card:hover {
+  box-shadow: var(--shadow-hover, 0 0 0 1px var(--accent));
+  transform: translateY(-4px);
+}
+
+#lightbox {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999; align-items: center; justify-content: center;
+}
+#lightbox.open  { display: flex; }
+#lightbox img   { max-width: 90vw; max-height: 85vh; object-fit: contain; border: 2px solid var(--accent); border-radius: 4px; }
+
+.gallery-item   { cursor: pointer; overflow: hidden; position: relative; }
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay {
+  position: absolute; inset: 0;
+  background: rgba(var(--accent-rgb), 0.32);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.gallery-item img { transition: transform 0.4s ease; width: 100%; height: 100%; object-fit: cover; }
+.gallery-item:hover img { transform: scale(1.07); }
+
+/* ================================================================
+   THEME SWITCHER BAR
+================================================================ */
+#theme-bar {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 12px;
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+#theme-bar::-webkit-scrollbar { display: none; }
+
+.tb-group-label {
+  font-size: 10px;
+  font-family: 'Sarabun', sans-serif;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+.tb-sep {
+  width: 1px; height: 22px;
+  background: rgba(255,255,255,0.1);
+  margin: 0 6px;
+  flex-shrink: 0;
+}
+.tb-btn {
+  display: flex; align-items: center; gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  background: rgba(255,255,255,0.05);
+  font-size: 11px;
+  font-family: 'Sarabun', sans-serif;
+  color: rgba(255,255,255,0.5);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.tb-btn:hover   { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); }
+.tb-btn.active  { border-color: rgba(255,255,255,0.45); color: #fff; background: rgba(255,255,255,0.12); }
+.tb-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: block; flex-shrink: 0;
+}
+/* Moon / Sun icon shortcuts */
+.tb-icon { font-size: 12px; line-height: 1; }
+</style>
 </head>
 
-<!-- Apply saved theme immediately to avoid flash -->
 <script>
-  (function(){
-    var t = localStorage.getItem('rbswall_theme') || '1';
-    document.documentElement.setAttribute('data-theme-init', t);
-    if (t !== '1') document.write('<style>body{opacity:0;transition:opacity 0.2s}</style>');
-  })();
+(function(){
+  var s = localStorage.getItem('rbs_style') || 'a-dark';
+  document.documentElement.dataset.style = s;
+})();
 </script>
 
-<body class="min-h-screen theme-1">
+<body class="min-h-screen" style="opacity:0; transition: opacity 0.2s;">
 
 <!-- ========== THEME SWITCHER BAR ========== -->
 <div id="theme-bar" role="navigation" aria-label="เลือกธีม">
-  <span class="bar-label hidden sm:block">ธีม :</span>
 
-  <button class="theme-dot-btn" data-theme="1" onclick="setTheme(1)" title="ธีม 1 – Dark Orange" aria-label="ธีม 1 Dark Industrial">
-    <span class="theme-dot" style="background:#f97316;"></span>
-    <span>Dark</span>
+  <!-- Group A: Industrial -->
+  <span class="tb-group-label hidden sm:block">Industrial</span>
+  <button class="tb-btn" data-style="a-dark"  onclick="setStyle('a-dark')"  title="Industrial Dark">
+    <span class="tb-dot" style="background:#f97316;"></span>Dark
+  </button>
+  <button class="tb-btn" data-style="a-light" onclick="setStyle('a-light')" title="Industrial Light">
+    <span class="tb-dot" style="background:#2563eb;"></span>Light
+  </button>
+  <button class="tb-btn" data-style="a-navy"  onclick="setStyle('a-navy')"  title="Industrial Navy">
+    <span class="tb-dot" style="background:#d97706;"></span>Navy
   </button>
 
-  <span class="theme-divider"></span>
+  <span class="tb-sep"></span>
 
-  <button class="theme-dot-btn" data-theme="2" onclick="setTheme(2)" title="ธีม 2 – Light Blue" aria-label="ธีม 2 Light Professional">
-    <span class="theme-dot" style="background:#2563eb;"></span>
-    <span>Light</span>
+  <!-- Group B: Modern -->
+  <span class="tb-group-label hidden sm:block">Modern</span>
+  <button class="tb-btn" data-style="b-dark"  onclick="setStyle('b-dark')"  title="Modern Dark">
+    <span class="tb-icon">🌙</span>Dark
+  </button>
+  <button class="tb-btn" data-style="b-light" onclick="setStyle('b-light')" title="Modern Light">
+    <span class="tb-icon">☀️</span>Light
   </button>
 
-  <span class="theme-divider"></span>
+  <span class="tb-sep"></span>
 
-  <button class="theme-dot-btn" data-theme="3" onclick="setTheme(3)" title="ธีม 3 – Navy Gold" aria-label="ธีม 3 Navy Premium">
-    <span class="theme-dot" style="background:#d97706;"></span>
-    <span>Premium</span>
+  <!-- Group C: Bold Premium -->
+  <span class="tb-group-label hidden sm:block">Premium</span>
+  <button class="tb-btn" data-style="c-dark"  onclick="setStyle('c-dark')"  title="Premium Dark">
+    <span class="tb-icon">🌙</span>Dark
   </button>
+  <button class="tb-btn" data-style="c-light" onclick="setStyle('c-light')" title="Premium Light">
+    <span class="tb-icon">☀️</span>Light
+  </button>
+
 </div>
 
-<!-- ========== NAVBAR (offset by theme bar) ========== -->
+<!-- ========== NAVBAR ========== -->
 <nav id="navbar" class="fixed left-0 right-0 z-50 transition-all duration-300"
-     style="top: 36px; background-color: transparent;">
+     style="top:44px; background:transparent;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
 
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href="/" class="flex items-center gap-2">
         <div class="w-9 h-9 flex items-center justify-center flex-shrink-0"
-             style="background-color: var(--accent);">
+             style="background-color:var(--accent); border-radius:var(--radius-btn, 4px);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
             <rect x="2" y="3" width="4" height="18" rx="1"/>
             <rect x="10" y="3" width="4" height="18" rx="1"/>
@@ -382,33 +579,28 @@
           </svg>
         </div>
         <div class="leading-tight">
-          <div class="font-black text-base tracking-wide leading-none" style="color: var(--accent);">พี่หญิง</div>
-          <div class="font-bold text-xs tracking-widest" style="color: var(--text);">ล้อมรั้วทั่วไทย</div>
+          <div class="font-black text-base tracking-wide leading-none" style="color:var(--accent); font-family:var(--font-heading);">พี่หญิง</div>
+          <div class="font-bold text-xs tracking-widest" style="color:var(--text);">ล้อมรั้วทั่วไทย</div>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
         <?php
-        $navLinks = [
-            '/'        => 'หน้าแรก',
-            '/about'   => 'เกี่ยวกับเรา',
-            '/gallery' => 'ผลงาน',
-            '/contact' => 'ติดต่อเรา',
-        ];
+        $navLinks = ['/' => 'หน้าแรก', '/about' => 'เกี่ยวกับเรา', '/gallery' => 'ผลงาน', '/contact' => 'ติดต่อเรา'];
         foreach ($navLinks as $href => $label):
-            $isActive = ($href === '/' && $currentPage === 'home')
-                     || ($href !== '/' && '/' . $currentPage === $href);
+          $isActive = ($href==='/' && $currentPage==='home') || ($href!=='/' && '/'.  $currentPage===$href);
         ?>
           <a href="<?= $href ?>"
-             class="text-sm font-semibold tracking-wide transition-colors duration-200 pb-1 nav-link
-                    <?= $isActive ? 'nav-active' : 'nav-idle' ?>">
+             class="nav-link text-sm font-semibold tracking-wide transition-colors duration-200 pb-1
+                    <?= $isActive ? 'nav-active border-b-2 border-current' : 'nav-idle' ?>"
+             style="color:<?= $isActive ? 'var(--accent)' : 'var(--text-muted)' ?>; font-family:var(--font-body);">
             <?= $label ?>
           </a>
         <?php endforeach; ?>
         <a href="tel:0890577047"
-           class="ml-2 text-white text-sm font-bold px-5 py-2.5 transition-colors duration-200 tracking-wide flex items-center gap-1.5"
-           style="background-color: var(--accent);">
+           class="text-white text-sm font-bold px-5 py-2.5 flex items-center gap-1.5 transition-all duration-200 nav-cta-btn"
+           style="background-color:var(--accent); border-radius:var(--radius-btn, 2px); font-family:var(--font-body);">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
           </svg>
@@ -417,7 +609,7 @@
       </div>
 
       <!-- Mobile hamburger -->
-      <button id="hamburger" class="md:hidden p-2 focus:outline-none" style="color: var(--text);" aria-label="เปิดเมนู">
+      <button id="hamburger" class="md:hidden p-2 focus:outline-none" style="color:var(--text);" aria-label="เปิดเมนู">
         <svg id="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
@@ -429,164 +621,128 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden" style="background-color: var(--bg-navbar);">
-    <div class="px-4 pt-2 pb-6 flex flex-col gap-1" style="border-top: 1px solid var(--border-light);">
+  <div id="mobile-menu" class="md:hidden" style="background:var(--bg-navbar); border-top:1px solid var(--border-light);">
+    <div class="px-4 pt-2 pb-6 flex flex-col gap-1">
       <?php foreach ($navLinks as $href => $label):
-          $isActive = ($href === '/' && $currentPage === 'home')
-                   || ($href !== '/' && '/' . $currentPage === $href);
-      ?>
+        $isActive = ($href==='/' && $currentPage==='home') || ($href!=='/' && '/'.$currentPage===$href); ?>
         <a href="<?= $href ?>"
-           class="block py-3 px-3 text-base font-semibold mobile-nav-link <?= $isActive ? 'mobile-nav-active' : '' ?>">
+           class="block py-3 px-3 text-base font-semibold"
+           style="color:<?= $isActive ? 'var(--accent)' : 'var(--text)' ?>; border-bottom:1px solid var(--border); font-family:var(--font-body);">
           <?= $label ?>
         </a>
       <?php endforeach; ?>
       <a href="/contact"
          class="mt-4 block text-center text-white font-bold px-5 py-3 transition-colors duration-200"
-         style="background-color: var(--accent);">
+         style="background-color:var(--accent); border-radius:var(--radius-btn, 2px); font-family:var(--font-body);">
         ขอใบเสนอราคาฟรี
       </a>
     </div>
   </div>
 </nav>
 
-<!-- Spacer: theme bar (36px) + navbar height -->
+<!-- Spacer -->
 <?php if ($currentPage !== 'home'): ?>
-<div style="height: calc(36px + 4rem);"></div>
+<div style="height:calc(44px + 5rem);"></div>
 <?php else: ?>
-<div style="height: 36px;"></div>
+<div style="height:44px;"></div>
 <?php endif; ?>
 
-<!-- Lightbox (global) -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="ดูภาพขนาดใหญ่">
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true">
   <button id="lightbox-close"
-    class="absolute top-4 right-4 text-white w-10 h-10 flex items-center justify-center text-2xl font-bold z-10 transition-colors"
-    style="background-color: var(--accent);"
-    aria-label="ปิด">&times;</button>
-  <img id="lightbox-img" src="" alt="ผลงาน พี่หญิง ล้อมรั้วทั่วไทย" />
+    class="absolute top-4 right-4 text-white w-10 h-10 flex items-center justify-center text-2xl font-bold z-10"
+    style="background-color:var(--accent); border-radius:var(--radius-btn, 2px);">&times;</button>
+  <img id="lightbox-img" src="" alt="ผลงาน" />
 </div>
 
 <script>
-/* ──────────────────────────────────────────
-   THEME SWITCHER
-────────────────────────────────────────── */
-const THEMES = {
-  1: { name: 'theme-1', navText: 'rgba(209,213,219,1)', navActive: null },
-  2: { name: 'theme-2', navText: 'rgba(51,65,85,1)',   navActive: null },
-  3: { name: 'theme-3', navText: 'rgba(203,213,225,1)', navActive: null },
-};
+/* ══════════════════════════════════════════
+   STYLE SWITCHER
+══════════════════════════════════════════ */
+const ALL_STYLES = ['a-dark','a-light','a-navy','b-dark','b-light','c-dark','c-light'];
 
-function setTheme(n) {
-  // Remove old theme classes
-  document.body.classList.remove('theme-1','theme-2','theme-3');
-  document.body.classList.add('theme-' + n);
+function setStyle(s) {
+  // Remove all style classes
+  document.body.classList.remove(...ALL_STYLES);
+  document.body.classList.add(s);
+  localStorage.setItem('rbs_style', s);
 
-  // Persist
-  localStorage.setItem('rbswall_theme', n);
+  // Active button highlight
+  document.querySelectorAll('.tb-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.style === s);
+  });
 
-  // Update nav link colors
-  updateNavColors(n);
+  // Update nav link colors after CSS vars settle
+  requestAnimationFrame(syncNavColors);
+}
 
-  // Update active dot button
-  document.querySelectorAll('.theme-dot-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.theme == n);
+function syncNavColors() {
+  const accent = getComputedStyle(document.body).getPropertyValue('--accent').trim();
+  const muted  = getComputedStyle(document.body).getPropertyValue('--text-muted').trim();
+  document.querySelectorAll('.nav-link').forEach(el => {
+    el.style.color = el.classList.contains('nav-active') ? accent : muted;
   });
 }
 
-function updateNavColors(n) {
-  const isLight = (n == 2);
-  document.querySelectorAll('.nav-idle').forEach(el => {
-    el.style.color = isLight ? '#374151' : '#d1d5db';
-  });
-  document.querySelectorAll('.nav-active').forEach(el => {
-    el.style.color = getComputedStyle(document.body).getPropertyValue('--accent').trim();
-  });
-  document.querySelectorAll('.mobile-nav-link').forEach(el => {
-    el.style.color = isLight ? '#1e293b' : '#e5e7eb';
-    el.style.borderBottom = '1px solid ' + (isLight ? 'rgba(0,0,0,0.07)' : 'rgba(255,255,255,0.05)');
-  });
-  document.querySelectorAll('.mobile-nav-active').forEach(el => {
-    el.style.color = getComputedStyle(document.body).getPropertyValue('--accent').trim();
-  });
-  // Hamburger icon
-  const hamburger = document.getElementById('hamburger');
-  if (hamburger) hamburger.style.color = isLight ? '#0f172a' : '#ffffff';
-}
-
-// Apply theme on DOM ready
-document.addEventListener('DOMContentLoaded', function() {
-  const saved = parseInt(localStorage.getItem('rbswall_theme') || '1');
-  setTheme(saved);
-  document.body.style.opacity = '1';
-});
-
-/* ──────────────────────────────────────────
-   NAVBAR SCROLL EFFECT
-────────────────────────────────────────── */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 40) {
-    navbar.classList.add('navbar-scrolled');
-  } else {
-    navbar.classList.remove('navbar-scrolled');
-  }
-}, { passive: true });
-
-/* ──────────────────────────────────────────
-   HAMBURGER MENU
-────────────────────────────────────────── */
-const hamburger   = document.getElementById('hamburger');
-const mobileMenu  = document.getElementById('mobile-menu');
-const iconOpen    = document.getElementById('icon-open');
-const iconClose   = document.getElementById('icon-close');
-
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  iconOpen.style.display  = isOpen ? 'none'  : 'block';
-  iconClose.style.display = isOpen ? 'block' : 'none';
-});
-mobileMenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    iconOpen.style.display  = 'block';
-    iconClose.style.display = 'none';
-  });
-});
-
-/* ──────────────────────────────────────────
-   FADE-IN ON SCROLL
-────────────────────────────────────────── */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
+// Init on load
 document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('rbs_style') || 'a-dark';
+  setStyle(saved);
+  document.body.style.opacity = '1';
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 });
 
-/* ──────────────────────────────────────────
+/* ══════════════════════════════════════════
+   NAVBAR SCROLL
+══════════════════════════════════════════ */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('navbar-scrolled', window.scrollY > 40);
+}, { passive: true });
+
+/* ══════════════════════════════════════════
+   HAMBURGER
+══════════════════════════════════════════ */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const iconOpen   = document.getElementById('icon-open');
+const iconClose  = document.getElementById('icon-close');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  iconOpen.style.display  = open ? 'none'  : 'block';
+  iconClose.style.display = open ? 'block' : 'none';
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  iconOpen.style.display = 'block';
+  iconClose.style.display = 'none';
+}));
+
+/* ══════════════════════════════════════════
+   FADE-IN OBSERVER
+══════════════════════════════════════════ */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+
+/* ══════════════════════════════════════════
    LIGHTBOX
-────────────────────────────────────────── */
+══════════════════════════════════════════ */
 const lightbox      = document.getElementById('lightbox');
 const lightboxImg   = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');
-
 function openLightbox(src, alt) {
-  lightboxImg.src = src;
-  lightboxImg.alt = alt || 'ผลงาน พี่หญิง ล้อมรั้วทั่วไทย';
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  lightboxImg.src = src; lightboxImg.alt = alt || 'ผลงาน';
+  lightbox.classList.add('open'); document.body.style.overflow = 'hidden';
 }
 function closeLightbox() {
-  lightbox.classList.remove('open');
-  document.body.style.overflow = '';
-  lightboxImg.src = '';
+  lightbox.classList.remove('open'); document.body.style.overflow = ''; lightboxImg.src = '';
 }
 lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+function openLightboxImg(src, label) { openLightbox(src, label); }
 </script>
