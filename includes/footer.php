@@ -6,7 +6,7 @@
       <!-- Brand -->
       <div>
         <div class="flex items-center gap-2 mb-4">
-          <div class="w-9 h-9 bg-orange-500 flex items-center justify-center">
+          <div class="w-9 h-9 bg-orange-500 flex items-center justify-center flex-shrink-0">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
               <rect x="2" y="3" width="4" height="18" rx="1"/>
               <rect x="10" y="3" width="4" height="18" rx="1"/>
@@ -15,28 +15,31 @@
               <line x1="2" y1="15" x2="22" y2="15"/>
             </svg>
           </div>
-          <span class="text-white font-black text-xl tracking-widest">RBS <span class="text-orange-500">WALL</span></span>
+          <div class="leading-tight">
+            <div class="text-orange-500 font-black text-base tracking-wide leading-none">พี่หญิง</div>
+            <div class="text-white font-bold text-xs tracking-widest">ล้อมรั้วทั่วไทย</div>
+          </div>
         </div>
         <p class="text-gray-400 text-sm leading-relaxed mb-4">
-          บริการรับเหมาทำรั้วครบวงจร ด้วยประสบการณ์กว่า 10 ปี<br>
-          งานคุณภาพ ราคายุติธรรม ให้บริการทั่วภาคอีสาน
+          บริการรับเหมาทำรั้วครบวงจร รั้วลวดหนาม รั้วเมทัลชีท<br>
+          รั้วคาวบอย กำแพงกั้นดิน ติดตั้งประตูบานเลื่อน-บานสวิง
         </p>
         <div class="flex gap-3">
-          <a href="tel:0812345678"
+          <a href="tel:0890577047"
              class="w-9 h-9 bg-[#1e1e1e] hover:bg-orange-500 flex items-center justify-center transition-colors duration-200"
              aria-label="โทร">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
             </svg>
           </a>
-          <a href="https://line.me/ti/p/~@rbswall"
+          <a href="https://line.me/ti/p/~0806199152"
              class="w-9 h-9 bg-[#1e1e1e] hover:bg-[#06c755] flex items-center justify-center transition-colors duration-200"
              aria-label="LINE">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
               <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
             </svg>
           </a>
-          <a href="https://facebook.com/rbswall"
+          <a href="https://www.facebook.com/phiihyingthawaithy"
              class="w-9 h-9 bg-[#1e1e1e] hover:bg-[#1877f2] flex items-center justify-center transition-colors duration-200"
              aria-label="Facebook">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
@@ -51,7 +54,7 @@
         <h3 class="text-white font-bold text-base mb-4 tracking-wide">บริการของเรา</h3>
         <ul class="space-y-2">
           <?php
-          $services = ['รั้วเหล็ก','รั้วปูน','รั้วตาข่าย','รั้วสำเร็จรูป'];
+          $services = ['รั้วลวดหนาม','รั้วเมทัลชีท','รั้วคาวบอย','รั้วกำแพงกั้นดิน','ติดตั้งประตู','บานเลื่อน-บานสวิง'];
           foreach ($services as $s): ?>
             <li>
               <a href="/contact" class="text-gray-400 hover:text-orange-400 text-sm transition-colors duration-200 flex items-center gap-2">
@@ -79,7 +82,8 @@
             </svg>
             <div>
               <p class="text-gray-300 text-sm font-medium">โทรศัพท์</p>
-              <a href="tel:0812345678" class="text-orange-400 hover:text-orange-300 text-sm transition-colors">081-234-5678</a>
+              <a href="tel:0890577047" class="text-orange-400 hover:text-orange-300 text-sm transition-colors">089-057-7047</a><br>
+              <a href="tel:0806199152" class="text-orange-400 hover:text-orange-300 text-sm transition-colors">080-619-9152</a>
             </div>
           </li>
           <li class="flex items-start gap-3">
@@ -88,7 +92,7 @@
             </svg>
             <div>
               <p class="text-gray-300 text-sm font-medium">LINE</p>
-              <span class="text-orange-400 text-sm">@rbswall</span>
+              <span class="text-orange-400 text-sm">0806199152</span>
             </div>
           </li>
           <li class="flex items-start gap-3">
@@ -119,10 +123,10 @@
     <!-- Bottom bar -->
     <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p class="text-gray-500 text-sm text-center">
-        &copy; <?= date('Y') ?> RBS Wall. สงวนลิขสิทธิ์ทั้งหมด
+        &copy; <?= date('Y') ?> พี่หญิง ล้อมรั้วทั่วไทย. สงวนลิขสิทธิ์ทั้งหมด
       </p>
       <p class="text-gray-600 text-xs">
-        บริการรับเหมาทำรั้วครบวงจร | งานคุณภาพ ราคายุติธรรม
+        รั้วลวดหนาม · รั้วเมทัลชีท · รั้วคาวบอย · ติดตั้งประตู
       </p>
     </div>
   </div>

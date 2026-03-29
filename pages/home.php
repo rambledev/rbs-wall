@@ -5,12 +5,12 @@
 
 // Gallery items with real photos from Picsum (seed = consistent image per item)
 $galleryItems = [
-    ['label' => 'รั้วเหล็กดัด บ้านพักอาศัย',  'type' => 'รั้วเหล็ก',      'img' => 'https://picsum.photos/seed/steel-fence-house/800/600'],
-    ['label' => 'รั้วปูน โรงงานอุตสาหกรรม',    'type' => 'รั้วปูน',        'img' => 'https://picsum.photos/seed/concrete-wall-factory/800/600'],
-    ['label' => 'รั้วตาข่าย ที่ดินเปล่า',       'type' => 'รั้วตาข่าย',    'img' => 'https://picsum.photos/seed/chainlink-fence-land/800/600'],
-    ['label' => 'รั้วสำเร็จรูป หมู่บ้าน',       'type' => 'รั้วสำเร็จรูป', 'img' => 'https://picsum.photos/seed/precast-fence-village/800/600'],
-    ['label' => 'รั้วเหล็กดัด ลายพิเศษ',        'type' => 'รั้วเหล็ก',      'img' => 'https://picsum.photos/seed/iron-gate-special/800/600'],
-    ['label' => 'รั้วคอนกรีต บ้านสองชั้น',      'type' => 'รั้วปูน',        'img' => 'https://picsum.photos/seed/concrete-fence-twostory/800/600'],
+    ['label' => 'รั้วลวดหนาม ที่ดินเปล่า',     'type' => 'รั้วลวดหนาม',   'img' => 'https://picsum.photos/seed/barbed-wire-land/800/600'],
+    ['label' => 'รั้วเมทัลชีท โรงงาน',          'type' => 'รั้วเมทัลชีท',  'img' => 'https://picsum.photos/seed/metal-sheet-factory/800/600'],
+    ['label' => 'รั้วคาวบอย ฟาร์มปศุสัตว์',     'type' => 'รั้วคาวบอย',    'img' => 'https://picsum.photos/seed/cowboy-ranch-fence/800/600'],
+    ['label' => 'กำแพงกั้นดิน บ้านพักอาศัย',   'type' => 'กำแพงกั้นดิน',  'img' => 'https://picsum.photos/seed/retaining-wall-home/800/600'],
+    ['label' => 'ประตูบานเลื่อน บ้านสองชั้น',   'type' => 'ติดตั้งประตู',  'img' => 'https://picsum.photos/seed/sliding-gate-house/800/600'],
+    ['label' => 'ประตูบานสวิง คฤหาสน์',         'type' => 'บานสวิง',        'img' => 'https://picsum.photos/seed/swing-gate-mansion/800/600'],
 ];
 ?>
 
@@ -77,15 +77,15 @@ $galleryItems = [
     <!-- Main headline -->
     <h1 class="text-white font-black leading-tight mb-6"
         style="font-size: clamp(2.2rem, 6vw, 4.5rem); opacity:0; animation: heroFadeUp 0.7s ease 0.25s forwards; letter-spacing: -0.01em;">
-      บริการรับเหมาทำรั้ว<br>
-      <span class="text-orange-500">ครบวงจร</span>
+      พี่หญิง<br>
+      <span class="text-orange-500">ล้อมรั้วทั่วไทย</span>
     </h1>
 
     <!-- Subtitle -->
     <p class="text-gray-300 text-lg sm:text-xl mb-10 max-w-xl mx-auto leading-relaxed"
        style="opacity:0; animation: heroFadeUp 0.7s ease 0.4s forwards;">
       งานคุณภาพ ราคายุติธรรม ประเมินหน้างานฟรี<br>
-      <span class="text-orange-400 font-semibold">รั้วเหล็ก · รั้วปูน · รั้วตาข่าย · รั้วสำเร็จรูป</span>
+      <span class="text-orange-400 font-semibold">รั้วลวดหนาม · รั้วเมทัลชีท · รั้วคาวบอย · กำแพงกั้นดิน</span>
     </p>
 
     <!-- CTA Buttons -->
@@ -102,12 +102,12 @@ $galleryItems = [
         </svg>
         ขอใบเสนอราคา
       </a>
-      <a href="tel:0812345678"
+      <a href="tel:0890577047"
          class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/40 hover:border-orange-500 text-white font-bold px-8 py-4 text-base transition-all duration-200 hover:text-orange-400">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
-        โทรเลย
+        089-057-7047
       </a>
     </div>
 
@@ -225,32 +225,44 @@ $galleryItems = [
     </div>
 
     <!-- Cards grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <?php
       $services = [
           [
-              'title' => 'รั้วเหล็ก',
-              'desc'  => 'รั้วเหล็กดัดแบบโมเดิร์น แข็งแรง สวยงาม เหมาะสำหรับบ้านพักอาศัยและอาคารทุกประเภท',
-              'img'   => 'https://picsum.photos/seed/iron-fence-service/400/240',
+              'title' => 'รั้วลวดหนาม',
+              'desc'  => 'รั้วลวดหนามคุณภาพสูง ทนทาน เหมาะสำหรับที่ดิน ฟาร์ม สวนไร่ และพื้นที่กว้าง ราคาประหยัด',
+              'img'   => 'https://picsum.photos/seed/barbed-wire-fence/400/240',
               'delay' => '0',
           ],
           [
-              'title' => 'รั้วปูน',
-              'desc'  => 'รั้วคอนกรีตสำเร็จรูป ทนทาน มั่นคง ป้องกันการบุกรุก เหมาะสำหรับโรงงานและที่อยู่อาศัย',
-              'img'   => 'https://picsum.photos/seed/concrete-wall-service/400/240',
+              'title' => 'รั้วเมทัลชีท',
+              'desc'  => 'รั้วแผ่นเมทัลชีทสวยงาม ทนทาน กันแดดกันฝน เหมาะสำหรับบ้าน โรงงาน และโกดังสินค้า',
+              'img'   => 'https://picsum.photos/seed/metal-sheet-fence/400/240',
               'delay' => '0.1s',
           ],
           [
-              'title' => 'รั้วตาข่าย',
-              'desc'  => 'รั้วตาข่ายถัก เหมาะสำหรับที่ดินเปล่า โรงงาน และพื้นที่กว้าง ราคาประหยัด ติดตั้งรวดเร็ว',
-              'img'   => 'https://picsum.photos/seed/mesh-fence-service/400/240',
+              'title' => 'รั้วคาวบอย',
+              'desc'  => 'รั้วคาวบอยแบบท่อ/เหล็กกลม แข็งแรง ดูดี เหมาะสำหรับฟาร์ม สวนผลไม้ และคอกสัตว์',
+              'img'   => 'https://picsum.photos/seed/ranch-cowboy-fence/400/240',
               'delay' => '0.2s',
           ],
           [
-              'title' => 'รั้วสำเร็จรูป',
-              'desc'  => 'รั้วแผ่นสำเร็จรูป ติดตั้งเร็ว ประหยัดเวลา เหมาะสำหรับโครงการบ้านจัดสรรและอาคารพาณิชย์',
-              'img'   => 'https://picsum.photos/seed/precast-wall-service/400/240',
+              'title' => 'กำแพงกั้นดิน',
+              'desc'  => 'กำแพงคอนกรีตกั้นดินสำเร็จรูป มั่นคงแข็งแรง ป้องกันดินพัง เหมาะทุกพื้นที่',
+              'img'   => 'https://picsum.photos/seed/retaining-wall-concrete/400/240',
               'delay' => '0.3s',
+          ],
+          [
+              'title' => 'ติดตั้งประตู',
+              'desc'  => 'รับติดตั้งประตูทุกประเภท บานเลื่อน บานสวิง ประตูรีโมท ออกแบบตามต้องการ',
+              'img'   => 'https://picsum.photos/seed/gate-installation/400/240',
+              'delay' => '0.4s',
+          ],
+          [
+              'title' => 'บานเลื่อน-บานสวิง',
+              'desc'  => 'ประตูบานเลื่อนและบานสวิงเหล็ก แข็งแรง ทนทาน ออกแบบให้เข้ากับสไตล์บ้านและรั้วของคุณ',
+              'img'   => 'https://picsum.photos/seed/sliding-swing-gate/400/240',
+              'delay' => '0.5s',
           ],
       ];
       foreach ($services as $s): ?>
@@ -379,19 +391,19 @@ function openLightboxImg(src, label) {
       เราส่งทีมช่างออกสำรวจหน้างาน วัดพื้นที่จริง และเสนอราคาโดยไม่มีค่าใช้จ่ายใดทั้งสิ้น
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="tel:0812345678"
+      <a href="tel:0890577047"
          class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-base transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/25">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
-        โทร 081-234-5678
+        โทร 089-057-7047
       </a>
-      <a href="https://line.me/ti/p/~@rbswall"
+      <a href="https://line.me/ti/p/~0806199152"
          class="inline-flex items-center justify-center gap-2 bg-[#06c755] hover:bg-[#05b34c] text-white font-bold px-8 py-4 text-base transition-all duration-200 hover:-translate-y-0.5">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
           <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
         </svg>
-        LINE: @rbswall
+        LINE: 0806199152
       </a>
     </div>
   </div>

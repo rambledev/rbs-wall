@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="RBS Wall บริการรับเหมาทำรั้วครบวงจร รั้วเหล็ก รั้วปูน รั้วตาข่าย รั้วสำเร็จรูป งานคุณภาพ ราคายุติธรรม ประเมินหน้างานฟรี" />
-  <meta name="keywords" content="รั้ว,รั้วเหล็ก,รั้วปูน,รับเหมาทำรั้ว,รั้วตาข่าย,รั้วสำเร็จรูป,RBS Wall" />
+  <meta name="description" content="พี่หญิง ล้อมรั้วทั่วไทย บริการรับเหมาทำรั้วครบวงจร รั้วลวดหนาม รั้วเมทัลชีท รั้วคาวบอย กำแพงกั้นดิน ติดตั้งประตูบานเลื่อน-บานสวิง ราคายุติธรรม" />
+  <meta name="keywords" content="รั้วลวดหนาม,รั้วเมทัลชีท,รั้วคาวบอย,กำแพงกั้นดิน,ติดตั้งประตู,บานเลื่อน,พี่หญิงล้อมรั้ว" />
   <meta property="og:title" content="<?= htmlspecialchars($currentTitle) ?>" />
   <meta property="og:description" content="บริการรับเหมาทำรั้วครบวงจร งานคุณภาพ ราคายุติธรรม ประเมินหน้างานฟรี" />
   <meta property="og:type" content="website" />
@@ -167,7 +167,10 @@
             <line x1="2" y1="15" x2="22" y2="15"/>
           </svg>
         </div>
-        <span class="text-white font-black text-xl tracking-widest">RBS <span class="text-orange-500">WALL</span></span>
+        <div class="leading-tight">
+          <div class="text-orange-500 font-black text-base tracking-wide leading-none">พี่หญิง</div>
+          <div class="text-white font-bold text-xs tracking-widest">ล้อมรั้วทั่วไทย</div>
+        </div>
       </a>
 
       <!-- Desktop Nav -->
@@ -189,9 +192,12 @@
             <?= $label ?>
           </a>
         <?php endforeach; ?>
-        <a href="/contact"
-           class="ml-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-5 py-2.5 transition-colors duration-200 tracking-wide">
-          ขอใบเสนอราคา
+        <a href="tel:0890577047"
+           class="ml-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-5 py-2.5 transition-colors duration-200 tracking-wide flex items-center gap-1.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          089-057-7047
         </a>
       </div>
 

@@ -4,23 +4,24 @@
  */
 
 // Gallery items with real photos (picsum seed = consistent image per item)
+// Gallery items – ผลงานจริงของ พี่หญิง ล้อมรั้วทั่วไทย
 $galleryItems = [
-    ['label' => 'รั้วเหล็กดัด บ้านพักอาศัย',     'type' => 'รั้วเหล็ก',      'desc' => 'รั้วเหล็กดัดลายโมเดิร์น บ้านเดี่ยว 2 ชั้น',                'img' => 'https://picsum.photos/seed/iron-fence-house/800/600'],
-    ['label' => 'รั้วปูน โรงงานอุตสาหกรรม',       'type' => 'รั้วปูน',        'desc' => 'รั้วคอนกรีตความสูง 2.5 เมตร รอบโรงงาน',                   'img' => 'https://picsum.photos/seed/concrete-factory-wall/800/600'],
-    ['label' => 'รั้วตาข่าย ที่ดินเปล่า',         'type' => 'รั้วตาข่าย',    'desc' => 'รั้วตาข่ายถัก 5 ไร่ ความสูง 1.8 เมตร',                     'img' => 'https://picsum.photos/seed/chainlink-open-land/800/600'],
-    ['label' => 'รั้วสำเร็จรูป หมู่บ้านจัดสรร',  'type' => 'รั้วสำเร็จรูป', 'desc' => 'รั้วแผ่นสำเร็จรูป 40 แปลง โครงการบ้านจัดสรร',              'img' => 'https://picsum.photos/seed/precast-housing-estate/800/600'],
-    ['label' => 'รั้วเหล็กดัด ลายพิเศษ คฤหาสน์', 'type' => 'รั้วเหล็ก',      'desc' => 'รั้วเหล็กดัดลายกรีก ประตูบานใหญ่สั่งทำพิเศษ',              'img' => 'https://picsum.photos/seed/iron-gate-mansion/800/600'],
-    ['label' => 'รั้วคอนกรีต บ้านสองชั้น',        'type' => 'รั้วปูน',        'desc' => 'รั้วคอนกรีตบล็อกผสมเหล็กดัด สูง 2 เมตร',                  'img' => 'https://picsum.photos/seed/concrete-twostory/800/600'],
-    ['label' => 'รั้วตาข่ายถัก สวนผลไม้',         'type' => 'รั้วตาข่าย',    'desc' => 'รั้วตาข่ายรอบสวนผลไม้ 10 ไร่ พร้อมเสาคอนกรีต',             'img' => 'https://picsum.photos/seed/wire-mesh-orchard/800/600'],
-    ['label' => 'รั้วสำเร็จรูป อาคารพาณิชย์',    'type' => 'รั้วสำเร็จรูป', 'desc' => 'รั้วแผ่นสำเร็จรูปตีนฐาน อาคาร 4 คูหา',                    'img' => 'https://picsum.photos/seed/precast-commercial/800/600'],
-    ['label' => 'รั้วเหล็กทาสี บ้านทาวน์โฮม',   'type' => 'รั้วเหล็ก',      'desc' => 'รั้วเหล็กพ่นสีสนิทดำเนียน ทาวน์โฮม 10 ยูนิต',              'img' => 'https://picsum.photos/seed/steel-townhome-fence/800/600'],
-    ['label' => 'รั้วปูนผสมเหล็ก วิลล่าหรู',     'type' => 'รั้วปูน',        'desc' => 'รั้วสูง 3 เมตร ดีไซน์พิเศษ วิลล่าส่วนตัว',                 'img' => 'https://picsum.photos/seed/concrete-villa-luxury/800/600'],
-    ['label' => 'รั้วตาข่ายหกเหลี่ยม ฟาร์ม',    'type' => 'รั้วตาข่าย',    'desc' => 'รั้วตาข่ายหกเหลี่ยมรอบฟาร์ม 20 ไร่',                       'img' => 'https://picsum.photos/seed/hexagonal-farm-fence/800/600'],
-    ['label' => 'รั้วสำเร็จรูปขนาดใหญ่ โกดัง',  'type' => 'รั้วสำเร็จรูป', 'desc' => 'รั้วสำเร็จรูปรอบโกดังสินค้า ความสูง 2.2 เมตร',              'img' => 'https://picsum.photos/seed/precast-warehouse/800/600'],
+    ['label' => 'รั้วลวดหนาม ที่ดินเปล่า 5 ไร่',      'type' => 'รั้วลวดหนาม',  'desc' => 'รั้วลวดหนาม 3 เส้น พร้อมเสาเหล็ก ความยาว 200 เมตร',          'img' => 'https://picsum.photos/seed/barbed-wire-5rai/800/600'],
+    ['label' => 'รั้วเมทัลชีท โรงงานอุตสาหกรรม',      'type' => 'รั้วเมทัลชีท', 'desc' => 'รั้วเมทัลชีทสีเทา สูง 2 เมตร รอบโรงงาน ความยาว 400 เมตร',      'img' => 'https://picsum.photos/seed/metalsheet-factory/800/600'],
+    ['label' => 'รั้วคาวบอย ฟาร์มปศุสัตว์',           'type' => 'รั้วคาวบอย',   'desc' => 'รั้วคาวบอยท่อกลม 3 ราง รอบฟาร์มวัว 20 ไร่',                     'img' => 'https://picsum.photos/seed/cowboy-cattle-farm/800/600'],
+    ['label' => 'กำแพงกั้นดิน บ้านพักอาศัย',          'type' => 'กำแพงกั้นดิน', 'desc' => 'กำแพงคอนกรีตสำเร็จรูป สูง 1.5 เมตร กั้นดินลาดเอียง',            'img' => 'https://picsum.photos/seed/retaining-wall-slope/800/600'],
+    ['label' => 'ประตูบานเลื่อน รีโมตคอนโทรล',       'type' => 'ติดตั้งประตู',  'desc' => 'ประตูเหล็กบานเลื่อน ระบบรีโมต พร้อมมอเตอร์ไฟฟ้า',               'img' => 'https://picsum.photos/seed/electric-sliding-gate/800/600'],
+    ['label' => 'ประตูบานสวิง บ้านสองชั้น',           'type' => 'บานสวิง',       'desc' => 'ประตูเหล็กบานสวิง 2 บาน ดีไซน์โมเดิร์น พ่นสีดำด้าน',            'img' => 'https://picsum.photos/seed/swing-gate-modern/800/600'],
+    ['label' => 'รั้วลวดหนาม สวนผลไม้',               'type' => 'รั้วลวดหนาม',  'desc' => 'รั้วลวดหนามรอบสวนมะม่วง 10 ไร่ เสาคอนกรีตทุก 3 เมตร',          'img' => 'https://picsum.photos/seed/barbed-wire-orchard/800/600'],
+    ['label' => 'รั้วเมทัลชีท โกดังสินค้า',            'type' => 'รั้วเมทัลชีท', 'desc' => 'รั้วเมทัลชีทสีน้ำเงิน สูง 2.5 เมตร รอบโกดัง',                  'img' => 'https://picsum.photos/seed/metalsheet-warehouse/800/600'],
+    ['label' => 'รั้วคาวบอย สนามกีฬาม้า',             'type' => 'รั้วคาวบอย',   'desc' => 'รั้วคาวบอยท่อใหญ่ สนามฝึกม้า รองรับแรงกระแทกได้ดี',             'img' => 'https://picsum.photos/seed/cowboy-horse-arena/800/600'],
+    ['label' => 'กำแพงกั้นดิน โครงการบ้านจัดสรร',    'type' => 'กำแพงกั้นดิน', 'desc' => 'กำแพงสำเร็จรูป 60 แผ่น โครงการบ้านจัดสรร 40 แปลง',              'img' => 'https://picsum.photos/seed/retaining-housing/800/600'],
+    ['label' => 'ประตูบานสวิง คฤหาสน์หรู',            'type' => 'บานสวิง',       'desc' => 'ประตูบานสวิงอัตโนมัติ ลายเหล็กดัดพิเศษ สั่งทำตามแบบ',           'img' => 'https://picsum.photos/seed/swing-gate-luxury/800/600'],
+    ['label' => 'รั้วเมทัลชีท หมู่บ้านจัดสรร',       'type' => 'รั้วเมทัลชีท', 'desc' => 'รั้วเมทัลชีท 80 แปลง โครงการบ้านจัดสรร ส่งงานตรงเวลา',          'img' => 'https://picsum.photos/seed/metalsheet-village/800/600'],
 ];
 
 // Filter by type
-$filterTypes = ['ทั้งหมด', 'รั้วเหล็ก', 'รั้วปูน', 'รั้วตาข่าย', 'รั้วสำเร็จรูป'];
+$filterTypes = ['ทั้งหมด', 'รั้วลวดหนาม', 'รั้วเมทัลชีท', 'รั้วคาวบอย', 'กำแพงกั้นดิน', 'ติดตั้งประตู', 'บานสวิง'];
 ?>
 
 <!-- ===================================================

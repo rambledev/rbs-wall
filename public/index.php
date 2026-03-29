@@ -35,14 +35,14 @@ if (array_key_exists($route, $routes)) {
 
 // Page titles
 $titles = [
-    'home'    => 'RBS Wall – บริการรับเหมาทำรั้ว ครบวงจร',
-    'about'   => 'เกี่ยวกับเรา – RBS Wall',
-    'gallery' => 'ผลงานของเรา – RBS Wall',
-    'contact' => 'ติดต่อเรา – RBS Wall',
-    '404'     => '404 – ไม่พบหน้า | RBS Wall',
+    'home'    => 'พี่หญิง ล้อมรั้วทั่วไทย – รั้วลวดหนาม รั้วเมทัลชีท รั้วคาวบอย ครบวงจร',
+    'about'   => 'เกี่ยวกับเรา – พี่หญิง ล้อมรั้วทั่วไทย',
+    'gallery' => 'ผลงานของเรา – พี่หญิง ล้อมรั้วทั่วไทย',
+    'contact' => 'ติดต่อเรา – พี่หญิง ล้อมรั้วทั่วไทย',
+    '404'     => '404 – ไม่พบหน้า | พี่หญิง ล้อมรั้วทั่วไทย',
 ];
 
-$currentTitle = $titles[$page] ?? 'RBS Wall';
+$currentTitle = $titles[$page] ?? 'พี่หญิง ล้อมรั้วทั่วไทย';
 $currentPage  = $page;
 
 // Load header

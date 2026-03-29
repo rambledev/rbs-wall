@@ -38,8 +38,9 @@
           </svg>
         </div>
         <h3 class="text-white font-bold text-lg mb-1">โทรศัพท์</h3>
-        <p class="text-orange-400 font-bold text-xl mb-4">081-234-5678</p>
-        <a href="tel:0812345678"
+        <p class="text-orange-400 font-bold text-xl mb-1">089-057-7047</p>
+        <p class="text-orange-400 font-bold text-xl mb-4">080-619-9152</p>
+        <a href="tel:0890577047"
            class="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 text-sm transition-colors duration-200">
           โทรเลย
         </a>
@@ -53,8 +54,8 @@
           </svg>
         </div>
         <h3 class="text-white font-bold text-lg mb-1">LINE Official</h3>
-        <p class="text-[#06c755] font-bold text-xl mb-4">@rbswall</p>
-        <a href="https://line.me/ti/p/~@rbswall"
+        <p class="text-[#06c755] font-bold text-xl mb-4">0806199152</p>
+        <a href="https://line.me/ti/p/~0806199152"
            class="inline-block w-full bg-[#06c755] hover:bg-[#05b34c] text-white font-bold py-2.5 text-sm transition-colors duration-200">
           เพิ่มเพื่อน
         </a>
@@ -68,8 +69,8 @@
           </svg>
         </div>
         <h3 class="text-white font-bold text-lg mb-1">Facebook Page</h3>
-        <p class="text-[#1877f2] font-bold text-xl mb-4">RBS Wall</p>
-        <a href="https://facebook.com/rbswall"
+        <p class="text-[#1877f2] font-bold text-xl mb-4">พี่หญิงล้อมรั้วทั่วไทย</p>
+        <a href="https://www.facebook.com/phiihyingthawaithy"
            class="inline-block w-full bg-[#1877f2] hover:bg-[#1464d8] text-white font-bold py-2.5 text-sm transition-colors duration-200">
           ดูเพจ
         </a>
@@ -202,7 +203,8 @@
               </div>
               <div>
                 <p class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-0.5">โทรศัพท์</p>
-                <a href="tel:0812345678" class="text-white font-bold text-lg hover:text-orange-400 transition-colors">081-234-5678</a>
+                <a href="tel:0890577047" class="text-white font-bold text-lg hover:text-orange-400 transition-colors">089-057-7047</a><br>
+              <a href="tel:0806199152" class="text-white font-bold hover:text-orange-400 transition-colors">080-619-9152</a>
               </div>
             </li>
             <li class="flex items-start gap-4">
@@ -214,7 +216,8 @@
               </div>
               <div>
                 <p class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-0.5">LINE / Facebook</p>
-                <p class="text-white font-medium">@rbswall</p>
+                <p class="text-white font-medium">0806199152</p>
+              <p class="text-gray-400 text-sm">Facebook: พี่หญิงล้อมรั้วทั่วไทย</p>
               </div>
             </li>
             <li class="flex items-start gap-4">
