@@ -12,7 +12,14 @@ COPY public/   /var/www/html/public/
 COPY pages/    /var/www/html/pages/
 COPY includes/ /var/www/html/includes/
 
-# Fix permissions
+# Create uploads directory and set ownership.
+# Coolify: mount a persistent volume to /var/www/html/public/uploads/
+# The directory must exist at build time so the volume mount inherits correct permissions.
+RUN mkdir -p /var/www/html/public/uploads && \
+    chown -R www-data:www-data /var/www/html/public/uploads && \
+    chmod 755 /var/www/html/public/uploads
+
+# Fix permissions on all project files
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
