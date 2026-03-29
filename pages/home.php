@@ -75,8 +75,8 @@ $galleryItems = [
     </div>
 
     <!-- Main headline -->
-    <h1 class="text-white font-black leading-tight mb-6"
-        style="font-size: clamp(2.2rem, 6vw, 4.5rem); opacity:0; animation: heroFadeUp 0.7s ease 0.25s forwards; letter-spacing: -0.01em;">
+    <h1 class="text-white font-black mb-6"
+        style="font-size: clamp(2.2rem, 6vw, 4.5rem); line-height: 1.5; opacity:0; animation: heroFadeUp 0.7s ease 0.25s forwards; letter-spacing: -0.01em;">
       พี่หญิง<br>
       <span class="text-orange-500">ล้อมรั้วทั่วไทย</span>
     </h1>
