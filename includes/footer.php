@@ -1,5 +1,5 @@
 <!-- ========== FOOTER ========== -->
-<footer class="bg-[#0a0a0a] border-t-4 border-orange-500 pt-14 pb-8">
+<footer class="border-t-4 pt-14 pb-8" style="background-color: var(--bg-footer); border-top-color: var(--accent);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
 
@@ -125,7 +125,7 @@
       <p class="text-gray-500 text-sm text-center">
         &copy; <?= date('Y') ?> พี่หญิง ล้อมรั้วทั่วไทย. สงวนลิขสิทธิ์ทั้งหมด
       </p>
-      <p class="text-gray-600 text-xs">
+      <p class="text-xs" style="color: var(--text-subtle);">
         รั้วลวดหนาม · รั้วเมทัลชีท · รั้วคาวบอย · ติดตั้งประตู
       </p>
     </div>

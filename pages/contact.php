@@ -7,7 +7,7 @@
 <!-- ===================================================
      PAGE HERO
 =================================================== -->
-<section class="relative py-20 md:py-28 overflow-hidden" style="background-color: #161616;">
+<section class="relative py-20 md:py-28 overflow-hidden" style="background-color: var(--bg-secondary);">
   <div class="absolute inset-0 pointer-events-none"
        style="background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(249,115,22,0.025) 30px, rgba(249,115,22,0.025) 31px);">
   </div>
@@ -26,7 +26,7 @@
 <!-- ===================================================
      CONTACT CARDS
 =================================================== -->
-<section class="py-12" style="background-color: #111111;">
+<section class="py-12" style="background-color: var(--bg-primary);">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
@@ -84,7 +84,7 @@
 <!-- ===================================================
      MAP + FORM
 =================================================== -->
-<section class="py-16 md:py-24" style="background-color: #111111;">
+<section class="py-16 md:py-24" style="background-color: var(--bg-primary);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 

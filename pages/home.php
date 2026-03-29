@@ -18,7 +18,7 @@ $galleryItems = [
      HERO SECTION
 =================================================== -->
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden"
-         style="background-color: #111111;">
+         style="background-color: var(--bg-primary);">
 
   <!-- Background pattern -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -148,7 +148,7 @@ $galleryItems = [
 <!-- ===================================================
      ABOUT SECTION
 =================================================== -->
-<section id="about" class="py-20 md:py-28" style="background-color: #161616;">
+<section id="about" class="py-20 md:py-28" style="background-color: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
@@ -215,7 +215,7 @@ $galleryItems = [
 <!-- ===================================================
      SERVICES SECTION
 =================================================== -->
-<section id="services" class="py-20 md:py-28" style="background-color: #111111;">
+<section id="services" class="py-20 md:py-28" style="background-color: var(--bg-primary);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Title -->
@@ -303,7 +303,7 @@ $galleryItems = [
 <!-- ===================================================
      GALLERY PREVIEW
 =================================================== -->
-<section id="gallery" class="py-20 md:py-28" style="background-color: #161616;">
+<section id="gallery" class="py-20 md:py-28" style="background-color: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Title -->
@@ -376,7 +376,7 @@ function openLightboxImg(src, label) {
 <!-- ===================================================
      CONTACT CTA
 =================================================== -->
-<section class="py-20 md:py-28 relative overflow-hidden" style="background-color: #111111;">
+<section class="py-20 md:py-28 relative overflow-hidden" style="background-color: var(--bg-primary);">
   <!-- Orange diagonal accent -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
        style="background: linear-gradient(135deg, rgba(249,115,22,0.08) 0%, transparent 50%);"></div>

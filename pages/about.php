@@ -7,7 +7,7 @@
 <!-- ===================================================
      PAGE HERO
 =================================================== -->
-<section class="relative py-20 md:py-28 overflow-hidden" style="background-color: #161616;">
+<section class="relative py-20 md:py-28 overflow-hidden" style="background-color: var(--bg-secondary);">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
        style="background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(249,115,22,0.025) 30px, rgba(249,115,22,0.025) 31px);">
   </div>
@@ -29,7 +29,7 @@
 <!-- ===================================================
      STORY & MISSION
 =================================================== -->
-<section class="py-20 md:py-28" style="background-color: #111111;">
+<section class="py-20 md:py-28" style="background-color: var(--bg-primary);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
@@ -94,7 +94,7 @@
 <!-- ===================================================
      STATS
 =================================================== -->
-<section class="py-16" style="background-color: #161616; border-top: 1px solid rgba(255,255,255,0.05);">
+<section class="py-16" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
       <?php
@@ -118,7 +118,7 @@
 <!-- ===================================================
      VALUES / WHY US
 =================================================== -->
-<section class="py-20 md:py-28" style="background-color: #111111;">
+<section class="py-20 md:py-28" style="background-color: var(--bg-primary);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div class="text-center mb-14 fade-in">
@@ -168,7 +168,7 @@
 <!-- ===================================================
      TEAM / PROCESS
 =================================================== -->
-<section class="py-20 md:py-28" style="background-color: #161616;">
+<section class="py-20 md:py-28" style="background-color: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div class="text-center mb-14 fade-in">
@@ -206,7 +206,7 @@
 <!-- ===================================================
      CTA
 =================================================== -->
-<section class="py-16 relative overflow-hidden" style="background-color: #111111;">
+<section class="py-16 relative overflow-hidden" style="background-color: var(--bg-primary);">
   <div class="absolute inset-0 pointer-events-none"
        style="background: linear-gradient(135deg, rgba(249,115,22,0.08) 0%, transparent 50%);"></div>
   <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center fade-in">
