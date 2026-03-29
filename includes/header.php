@@ -13,7 +13,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;600;700;800&family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
 /* ================================================================
@@ -192,6 +192,152 @@ body.c-light {
   --stripe:        rgba(124,58,237,0.025);
   --heading-style: gradient;
 }
+
+/* ================================================================
+   STYLE D – CLEAN GALLERY
+   สะอาดตา โล่ง เน้นภาพ – พื้นหลังขาว, shadow นุ่ม, gallery-first
+================================================================ */
+body.d-clean {
+  --font-body:     'Kanit', 'Sarabun', sans-serif;
+  --font-heading:  'Kanit', 'Sarabun', sans-serif;
+  --bg-primary:    #ffffff;
+  --bg-secondary:  #f5f5f4;
+  --bg-card:       #ffffff;
+  --bg-footer:     #1c1917;
+  --bg-navbar:     rgba(255,255,255,0.98);
+  --accent:        #f97316;
+  --accent-dark:   #ea580c;
+  --accent-rgb:    249,115,22;
+  --text:          #171717;
+  --text-muted:    #737373;
+  --text-subtle:   #a3a3a3;
+  --border:        rgba(0,0,0,0.07);
+  --border-light:  rgba(0,0,0,0.11);
+  --radius-card:   12px;
+  --radius-btn:    6px;
+  --radius-img:    10px;
+  --shadow-card:   0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  --shadow-hover:  0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(249,115,22,0.18);
+  --hero-overlay:  none;
+  --stripe:        transparent;
+  --heading-style: normal;
+}
+
+/* ── Text overrides ─────────────────────────────────────────── */
+body.d-clean .text-white              { color: var(--text)        !important; }
+body.d-clean .text-gray-300           { color: #404040            !important; }
+body.d-clean .text-gray-400           { color: var(--text-muted)  !important; }
+body.d-clean .text-gray-500           { color: #737373            !important; }
+body.d-clean .text-gray-600           { color: #a3a3a3            !important; }
+
+/* ── Border overrides ──────────────────────────────────────── */
+body.d-clean .border-white\/5         { border-color: rgba(0,0,0,0.06)  !important; }
+body.d-clean .border-white\/10        { border-color: rgba(0,0,0,0.09)  !important; }
+body.d-clean .border-white\/20        { border-color: rgba(0,0,0,0.14)  !important; }
+body.d-clean .border-white\/40        { border-color: rgba(0,0,0,0.22)  !important; }
+
+/* ── Form inputs ────────────────────────────────────────────── */
+body.d-clean input, body.d-clean textarea, body.d-clean select {
+  color: var(--text) !important;
+  background-color: #fafafa !important;
+  border-color: rgba(0,0,0,0.12) !important;
+}
+body.d-clean input::placeholder,
+body.d-clean textarea::placeholder { color: #b5b5b5 !important; }
+
+/* ── Card dark-bg classes → white card ─────────────────────── */
+body.d-clean .bg-\[#1e1e1e\], body.d-clean .bg-\[#1a1a1a\],
+body.d-clean .bg-\[#161616\], body.d-clean .bg-\[#141414\],
+body.d-clean .bg-\[#171717\], body.d-clean .bg-\[#191919\] {
+  background-color: #ffffff !important;
+  border-color: rgba(0,0,0,0.07) !important;
+  border-radius: var(--radius-card) !important;
+}
+
+/* ── Service cards ──────────────────────────────────────────── */
+body.d-clean .service-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.07) !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+body.d-clean .service-card:hover {
+  box-shadow: var(--shadow-hover) !important;
+  transform: translateY(-6px) !important;
+  border-color: rgba(249,115,22,0.25) !important;
+}
+
+/* ── Gallery – generous gaps, image-first ───────────────────── */
+body.d-clean #gallery-grid { gap: 16px !important; }
+body.d-clean .gallery-item {
+  border-radius: var(--radius-img) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+body.d-clean .gallery-item:hover {
+  box-shadow: 0 20px 52px rgba(0,0,0,0.16) !important;
+  transform: translateY(-5px) scale(1.01) !important;
+}
+/* Neutral dark overlay (no orange tint) for clean look */
+body.d-clean .gallery-overlay {
+  background: rgba(0,0,0,0.28) !important;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+body.d-clean nav {
+  background: rgba(255,255,255,0.98) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.07) !important;
+  backdrop-filter: none !important;
+}
+body.d-clean .navbar-scrolled {
+  background: #ffffff !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.07) !important;
+  border-bottom-color: transparent !important;
+}
+
+/* ── Strip decorative noise ─────────────────────────────────── */
+/* Diagonal stripe texture divs */
+body.d-clean [style*="repeating-linear-gradient"] {
+  background-image: none !important;
+}
+/* Radial glow overlays inside sections */
+body.d-clean section > .absolute[style*="radial-gradient"] {
+  background: none !important;
+}
+/* Right-edge orange accent bars */
+body.d-clean section > .absolute.right-0.w-2 {
+  background: transparent !important;
+}
+
+/* ── Hero: light background, clean text ─────────────────────── */
+body.d-clean #hero {
+  background-color: #fafaf9 !important;
+  background-image: none !important;
+}
+/* Hide decorative SVG fence lines + orange bar */
+body.d-clean #hero svg.absolute,
+body.d-clean #hero > div.absolute[style*="width: 6px"] { display: none !important; }
+/* Hero text readable on light bg */
+body.d-clean #hero .text-white,
+body.d-clean #hero h1                  { color: var(--text) !important; }
+body.d-clean #hero p                   { color: var(--text-muted) !important; }
+body.d-clean #hero .text-gray-300      { color: #404040 !important; }
+body.d-clean #hero .text-gray-400      { color: var(--text-muted) !important; }
+body.d-clean #hero .text-orange-400,
+body.d-clean #hero .text-orange-500    { color: var(--accent) !important; }
+/* Outline CTA button on light hero */
+body.d-clean #hero a.border-2 {
+  border-color: rgba(0,0,0,0.2) !important;
+  color: var(--text) !important;
+}
+body.d-clean #hero a.border-2:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* ── Footer: keep dark ──────────────────────────────────────── */
+body.d-clean footer .text-white        { color: #f5f5f4 !important; }
+body.d-clean footer .text-gray-400     { color: #a3a3a3 !important; }
+body.d-clean footer .text-gray-500     { color: #737373 !important; }
 
 /* ================================================================
    BASE STYLES
@@ -558,6 +704,14 @@ body.c-light .navbar-scrolled {
     <span class="tb-icon">☀️</span>Light
   </button>
 
+  <span class="tb-sep"></span>
+
+  <!-- Group D: Clean Gallery -->
+  <span class="tb-group-label hidden sm:block">Clean</span>
+  <button class="tb-btn" data-style="d-clean" onclick="setStyle('d-clean')" title="Clean Gallery">
+    <span class="tb-dot" style="background:#ffffff; border:1.5px solid rgba(255,255,255,0.4);"></span>Clean
+  </button>
+
 </div>
 
 <!-- ========== NAVBAR ========== -->
@@ -659,7 +813,7 @@ body.c-light .navbar-scrolled {
 /* ══════════════════════════════════════════
    STYLE SWITCHER
 ══════════════════════════════════════════ */
-const ALL_STYLES = ['a-dark','a-light','a-navy','b-dark','b-light','c-dark','c-light'];
+const ALL_STYLES = ['a-dark','a-light','a-navy','b-dark','b-light','c-dark','c-light','d-clean'];
 
 function setStyle(s) {
   // Remove all style classes
