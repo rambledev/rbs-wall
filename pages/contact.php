@@ -1,6 +1,6 @@
 <?php
 /**
- * Contact Page – RBS Wall
+ * Contact Page – พี่หญิง ล้อมรั้วทั่วไทย
  */
 ?>
 
@@ -107,7 +107,7 @@
           </div>
           <h3 class="text-green-400 font-bold text-xl mb-2">ส่งข้อมูลสำเร็จ!</h3>
           <p class="text-gray-400 text-sm">
-            ขอบคุณที่ติดต่อ RBS Wall<br>
+            ขอบคุณที่ติดต่อ พี่หญิง ล้อมรั้วทั่วไทย<br>
             เราจะโทรกลับหาคุณภายใน 24 ชั่วโมง
           </p>
         </div>
@@ -145,10 +145,12 @@
                 <select id="f-type"
                         class="w-full bg-[#1e1e1e] border border-white/10 focus:border-orange-500 text-gray-300 px-4 py-3 text-sm outline-none transition-colors duration-200 appearance-none cursor-pointer">
                   <option value="">-- เลือกประเภทรั้ว --</option>
-                  <option value="รั้วเหล็ก">รั้วเหล็ก</option>
-                  <option value="รั้วปูน">รั้วปูน</option>
-                  <option value="รั้วตาข่าย">รั้วตาข่าย</option>
-                  <option value="รั้วสำเร็จรูป">รั้วสำเร็จรูป</option>
+                  <option value="รั้วลวดหนาม">รั้วลวดหนาม</option>
+                  <option value="รั้วเมทัลชีท">รั้วเมทัลชีท</option>
+                  <option value="รั้วคาวบอย">รั้วคาวบอย</option>
+                  <option value="กำแพงกั้นดิน">กำแพงกั้นดิน</option>
+                  <option value="ติดตั้งประตูบานเลื่อน">ติดตั้งประตูบานเลื่อน</option>
+                  <option value="ติดตั้งประตูบานสวิง">ติดตั้งประตูบานสวิง</option>
                   <option value="ไม่แน่ใจ / ขอคำแนะนำ">ไม่แน่ใจ / ขอคำแนะนำ</option>
                 </select>
                 <div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">

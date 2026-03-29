@@ -1,6 +1,6 @@
 <?php
 /**
- * Gallery Page – RBS Wall
+ * Gallery Page – พี่หญิง ล้อมรั้วทั่วไทย
  */
 
 // Gallery items with real photos (picsum seed = consistent image per item)
