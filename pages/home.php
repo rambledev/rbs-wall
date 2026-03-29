@@ -3,14 +3,14 @@
  * Home Page – RBS Wall
  */
 
-// Gallery placeholder items (used in both gallery section and gallery page)
+// Gallery items with real photos from Picsum (seed = consistent image per item)
 $galleryItems = [
-    ['label' => 'รั้วเหล็กดัด บ้านพักอาศัย',  'color' => 'from-[#1a1a1a] to-[#2a2a2a]', 'accent' => '#f97316', 'type' => 'รั้วเหล็ก'],
-    ['label' => 'รั้วปูน โรงงานอุตสาหกรรม',    'color' => 'from-[#161616] to-[#222222]', 'accent' => '#f97316', 'type' => 'รั้วปูน'],
-    ['label' => 'รั้วตาข่าย ที่ดินเปล่า',       'color' => 'from-[#1e1e1e] to-[#282828]', 'accent' => '#f97316', 'type' => 'รั้วตาข่าย'],
-    ['label' => 'รั้วสำเร็จรูป หมู่บ้าน',       'color' => 'from-[#181818] to-[#242424]', 'accent' => '#f97316', 'type' => 'รั้วสำเร็จรูป'],
-    ['label' => 'รั้วเหล็กดัด ลายพิเศษ',        'color' => 'from-[#1a1a1a] to-[#2c2c2c]', 'accent' => '#f97316', 'type' => 'รั้วเหล็ก'],
-    ['label' => 'รั้วคอนกรีต บ้านสองชั้น',      'color' => 'from-[#161616] to-[#262626]', 'accent' => '#f97316', 'type' => 'รั้วปูน'],
+    ['label' => 'รั้วเหล็กดัด บ้านพักอาศัย',  'type' => 'รั้วเหล็ก',      'img' => 'https://picsum.photos/seed/steel-fence-house/800/600'],
+    ['label' => 'รั้วปูน โรงงานอุตสาหกรรม',    'type' => 'รั้วปูน',        'img' => 'https://picsum.photos/seed/concrete-wall-factory/800/600'],
+    ['label' => 'รั้วตาข่าย ที่ดินเปล่า',       'type' => 'รั้วตาข่าย',    'img' => 'https://picsum.photos/seed/chainlink-fence-land/800/600'],
+    ['label' => 'รั้วสำเร็จรูป หมู่บ้าน',       'type' => 'รั้วสำเร็จรูป', 'img' => 'https://picsum.photos/seed/precast-fence-village/800/600'],
+    ['label' => 'รั้วเหล็กดัด ลายพิเศษ',        'type' => 'รั้วเหล็ก',      'img' => 'https://picsum.photos/seed/iron-gate-special/800/600'],
+    ['label' => 'รั้วคอนกรีต บ้านสองชั้น',      'type' => 'รั้วปูน',        'img' => 'https://picsum.photos/seed/concrete-fence-twostory/800/600'],
 ];
 ?>
 
@@ -231,46 +231,56 @@ $galleryItems = [
           [
               'title' => 'รั้วเหล็ก',
               'desc'  => 'รั้วเหล็กดัดแบบโมเดิร์น แข็งแรง สวยงาม เหมาะสำหรับบ้านพักอาศัยและอาคารทุกประเภท',
-              'svg'   => '<rect x="2" y="3" width="4" height="18" rx="1"/><rect x="10" y="3" width="4" height="18" rx="1"/><rect x="18" y="3" width="4" height="18" rx="1"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="2" y1="15" x2="22" y2="15"/>',
+              'img'   => 'https://picsum.photos/seed/iron-fence-service/400/240',
               'delay' => '0',
           ],
           [
               'title' => 'รั้วปูน',
               'desc'  => 'รั้วคอนกรีตสำเร็จรูป ทนทาน มั่นคง ป้องกันการบุกรุก เหมาะสำหรับโรงงานและที่อยู่อาศัย',
-              'svg'   => '<rect x="2" y="3" width="9" height="8" rx="1"/><rect x="13" y="3" width="9" height="8" rx="1"/><rect x="2" y="13" width="9" height="8" rx="1"/><rect x="13" y="13" width="9" height="8" rx="1"/>',
+              'img'   => 'https://picsum.photos/seed/concrete-wall-service/400/240',
               'delay' => '0.1s',
           ],
           [
               'title' => 'รั้วตาข่าย',
               'desc'  => 'รั้วตาข่ายถัก เหมาะสำหรับที่ดินเปล่า โรงงาน และพื้นที่กว้าง ราคาประหยัด ติดตั้งรวดเร็ว',
-              'svg'   => '<path d="M2 2l20 20M2 12l10-10m0 20L2 12m20-10L12 12m10 10L12 12"/><rect x="2" y="2" width="20" height="20" rx="1"/>',
+              'img'   => 'https://picsum.photos/seed/mesh-fence-service/400/240',
               'delay' => '0.2s',
           ],
           [
               'title' => 'รั้วสำเร็จรูป',
               'desc'  => 'รั้วแผ่นสำเร็จรูป ติดตั้งเร็ว ประหยัดเวลา เหมาะสำหรับโครงการบ้านจัดสรรและอาคารพาณิชย์',
-              'svg'   => '<rect x="2" y="3" width="20" height="18" rx="1"/><line x1="2" y1="8" x2="22" y2="8"/><line x1="2" y1="13" x2="22" y2="13"/><line x1="2" y1="18" x2="22" y2="18"/>',
+              'img'   => 'https://picsum.photos/seed/precast-wall-service/400/240',
               'delay' => '0.3s',
           ],
       ];
       foreach ($services as $s): ?>
-        <div class="fade-in service-card bg-[#1e1e1e] border-t-4 border-orange-500 border border-white/5 p-6 flex flex-col"
+        <div class="fade-in service-card bg-[#1e1e1e] border border-white/5 flex flex-col overflow-hidden"
              style="transition-delay: <?= $s['delay'] ?>;">
-          <!-- Icon -->
-          <div class="w-14 h-14 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-5">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.8">
-              <?= $s['svg'] ?>
-            </svg>
+          <!-- Photo thumbnail -->
+          <div class="relative h-44 overflow-hidden">
+            <img src="<?= htmlspecialchars($s['img']) ?>"
+                 alt="<?= htmlspecialchars($s['title']) ?>"
+                 loading="lazy"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <!-- Orange top border overlay -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-orange-500"></div>
+            <!-- Type badge -->
+            <div class="absolute top-3 left-3">
+              <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1"><?= htmlspecialchars($s['title']) ?></span>
+            </div>
           </div>
-          <h3 class="text-white font-bold text-xl mb-3"><?= $s['title'] ?></h3>
-          <p class="text-gray-400 text-sm leading-relaxed flex-1"><?= $s['desc'] ?></p>
-          <a href="/contact"
-             class="mt-5 inline-flex items-center gap-1.5 text-orange-500 hover:text-orange-400 font-semibold text-sm transition-colors duration-200">
-            ขอใบเสนอราคา
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
+          <!-- Card body -->
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-white font-bold text-xl mb-3"><?= $s['title'] ?></h3>
+            <p class="text-gray-400 text-sm leading-relaxed flex-1"><?= $s['desc'] ?></p>
+            <a href="/contact"
+               class="mt-5 inline-flex items-center gap-1.5 text-orange-500 hover:text-orange-400 font-semibold text-sm transition-colors duration-200">
+              ขอใบเสนอราคา
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
         </div>
       <?php endforeach; ?>
     </div>
@@ -302,25 +312,25 @@ $galleryItems = [
     <!-- Gallery Grid -->
     <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
       <?php foreach (array_slice($galleryItems, 0, 6) as $i => $item): ?>
-        <div class="fade-in gallery-item rounded-sm aspect-[4/3] bg-gradient-to-br <?= $item['color'] ?>"
+        <div class="fade-in gallery-item rounded-sm aspect-[4/3] bg-[#1e1e1e]"
              style="transition-delay: <?= $i * 0.08 ?>s;"
-             onclick="openLightbox('#gallery-<?= $i ?>', '<?= htmlspecialchars($item['label']) ?>')"
+             onclick="openLightboxImg('<?= htmlspecialchars($item['img']) ?>', '<?= htmlspecialchars($item['label']) ?>')"
              role="button"
              tabindex="0"
              aria-label="ดูภาพ: <?= htmlspecialchars($item['label']) ?>"
-             onkeypress="if(event.key==='Enter'){openLightbox('#gallery-<?= $i ?>','<?= htmlspecialchars($item['label']) ?>')}">
+             onkeypress="if(event.key==='Enter') openLightboxImg('<?= htmlspecialchars($item['img']) ?>','<?= htmlspecialchars($item['label']) ?>')">
 
-          <!-- Placeholder illustration -->
-          <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="<?= $item['accent'] ?>" stroke-width="1.2" opacity="0.5">
-              <rect x="2" y="3" width="4" height="18" rx="1"/>
-              <rect x="10" y="3" width="4" height="18" rx="1"/>
-              <rect x="18" y="3" width="4" height="18" rx="1"/>
-              <line x1="2" y1="9" x2="22" y2="9"/>
-              <line x1="2" y1="15" x2="22" y2="15"/>
-            </svg>
-            <span class="text-white/60 text-xs text-center leading-tight font-medium"><?= htmlspecialchars($item['label']) ?></span>
-            <span class="text-orange-500/60 text-xs font-bold tracking-wide"><?= htmlspecialchars($item['type']) ?></span>
+          <!-- Real photo -->
+          <img src="<?= htmlspecialchars($item['img']) ?>"
+               alt="<?= htmlspecialchars($item['label']) ?>"
+               loading="lazy"
+               class="absolute inset-0 w-full h-full object-cover" />
+
+          <!-- Bottom label bar -->
+          <div class="absolute bottom-0 left-0 right-0 px-3 py-2"
+               style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+            <span class="bg-orange-500 text-white text-xs font-bold px-2 py-0.5 mr-2"><?= htmlspecialchars($item['type']) ?></span>
+            <span class="text-white/90 text-xs"><?= htmlspecialchars($item['label']) ?></span>
           </div>
 
           <!-- Hover overlay -->
@@ -332,9 +342,6 @@ $galleryItems = [
               <line x1="8" y1="11" x2="14" y2="11"/>
             </svg>
           </div>
-
-          <!-- Hidden large-view ID for lightbox -->
-          <div id="gallery-<?= $i ?>" style="display:none;" data-src="placeholder" data-label="<?= htmlspecialchars($item['label']) ?>"></div>
         </div>
       <?php endforeach; ?>
     </div>
@@ -343,54 +350,11 @@ $galleryItems = [
 </section>
 
 <script>
-// Override openLightbox for gallery placeholders (no real image – show label)
-function openLightbox(selector, label) {
-  // Create a canvas-based placeholder image
-  const canvas = document.createElement('canvas');
-  canvas.width  = 800;
-  canvas.height = 600;
-  const ctx = canvas.getContext('2d');
-
-  // Background
-  ctx.fillStyle = '#1e1e1e';
-  ctx.fillRect(0, 0, 800, 600);
-
-  // Orange border
-  ctx.strokeStyle = '#f97316';
-  ctx.lineWidth = 4;
-  ctx.strokeRect(4, 4, 792, 592);
-
-  // Grid lines (fence pattern)
-  ctx.strokeStyle = 'rgba(249,115,22,0.15)';
-  ctx.lineWidth = 1;
-  for (let x = 60; x < 800; x += 60) {
-    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 600); ctx.stroke();
-  }
-  for (let y = 60; y < 600; y += 60) {
-    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(800, y); ctx.stroke();
-  }
-
-  // Fence post verticals
-  ctx.fillStyle = 'rgba(249,115,22,0.3)';
-  [180, 340, 500, 660].forEach(x => ctx.fillRect(x-8, 80, 16, 440));
-  // Horizontals
-  [180, 300].forEach(y => ctx.fillRect(140, y, 520, 10));
-
-  // Label
-  ctx.fillStyle = '#ffffff';
-  ctx.font = 'bold 28px Sarabun, sans-serif';
-  ctx.textAlign = 'center';
-  ctx.fillText(label, 400, 540);
-
-  ctx.fillStyle = '#f97316';
-  ctx.font = 'bold 20px Sarabun, sans-serif';
-  ctx.fillText('RBS WALL', 400, 48);
-
-  const src = canvas.toDataURL('image/png');
-  const lightboxImg  = document.getElementById('lightbox-img');
-  const lightboxEl   = document.getElementById('lightbox');
-  lightboxImg.src    = src;
-  lightboxImg.alt    = label;
+function openLightboxImg(src, label) {
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxEl  = document.getElementById('lightbox');
+  lightboxImg.src   = src;
+  lightboxImg.alt   = label;
   lightboxEl.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
