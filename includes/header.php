@@ -720,11 +720,9 @@ body.c-light .navbar-scrolled {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
 
-      <!-- Logo -->
       <a href="/" class="flex items-center gap-2">
         <div class="w-9 h-9 flex items-center justify-center flex-shrink-0"
-             style="background-color:var(--accent); border-radius:var(--radius-btn, 4px);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+             style="background-color:#166534; border-radius:var(--radius-btn, 4px);"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
             <rect x="2" y="3" width="4" height="18" rx="1"/>
             <rect x="10" y="3" width="4" height="18" rx="1"/>
             <rect x="18" y="3" width="4" height="18" rx="1"/>
@@ -733,12 +731,9 @@ body.c-light .navbar-scrolled {
           </svg>
         </div>
         <div class="leading-tight">
-          <div class="font-black text-base tracking-wide leading-none" style="color:var(--accent); font-family:var(--font-heading);">พี่หญิง</div>
-          <div class="font-bold text-xs tracking-widest" style="color:var(--text);">ล้อมรั้วทั่วไทย</div>
-        </div>
+          <div class="font-black text-base tracking-wide leading-none" style="color:#166534; font-family:var(--font-heading);">พี่หญิง</div> <div class="font-bold text-xs tracking-widest" style="color:#1e293b;">ล้อมรั้วทั่วไทย</div> </div>
       </a>
 
-      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
         <?php
         $navLinks = ['/' => 'หน้าแรก', '/about' => 'เกี่ยวกับเรา', '/gallery' => 'ผลงาน', '/contact' => 'ติดต่อเรา'];
@@ -748,23 +743,19 @@ body.c-light .navbar-scrolled {
           <a href="<?= $href ?>"
              class="nav-link text-sm font-semibold tracking-wide transition-colors duration-200 pb-1
                     <?= $isActive ? 'nav-active border-b-2 border-current' : 'nav-idle' ?>"
-             style="color:<?= $isActive ? 'var(--accent)' : 'var(--text-muted)' ?>; font-family:var(--font-body);">
-            <?= $label ?>
+             style="color:<?= $isActive ? '#166534' : '#64748b' ?>; border-color:#22c55e; font-family:var(--font-body);"> <?= $label ?>
           </a>
         <?php endforeach; ?>
         <a href="tel:0890577047"
            class="text-white text-sm font-bold px-5 py-2.5 flex items-center gap-1.5 transition-all duration-200 nav-cta-btn"
-           style="background-color:var(--accent); border-radius:var(--radius-btn, 2px); font-family:var(--font-body);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+           style="background-color:#166534; border-radius:var(--radius-btn, 2px); font-family:var(--font-body);"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
           </svg>
           089-057-7047
         </a>
       </div>
 
-      <!-- Mobile hamburger -->
-      <button id="hamburger" class="md:hidden p-2 focus:outline-none" style="color:var(--text);" aria-label="เปิดเมนู">
-        <svg id="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+      <button id="hamburger" class="md:hidden p-2 focus:outline-none" style="color:#166534;" aria-label="เปิดเมนู"> <svg id="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
         <svg id="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="display:none;">
@@ -774,21 +765,18 @@ body.c-light .navbar-scrolled {
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden" style="background:var(--bg-navbar); border-top:1px solid var(--border-light);">
-    <div class="px-4 pt-2 pb-6 flex flex-col gap-1">
+  <div id="mobile-menu" class="md:hidden" style="background:#ffffff; border-top:1px solid #f1f5f9;"> <div class="px-4 pt-2 pb-6 flex flex-col gap-1">
       <?php foreach ($navLinks as $href => $label):
         $isActive = ($href==='/' && $currentPage==='home') || ($href!=='/' && '/'.$currentPage===$href); ?>
         <a href="<?= $href ?>"
            class="block py-3 px-3 text-base font-semibold"
-           style="color:<?= $isActive ? 'var(--accent)' : 'var(--text)' ?>; border-bottom:1px solid var(--border); font-family:var(--font-body);">
+           style="color:<?= $isActive ? '#166534' : '#1e293b' ?>; border-bottom:1px solid #f1f5f9; font-family:var(--font-body);">
           <?= $label ?>
         </a>
       <?php endforeach; ?>
       <a href="/contact"
          class="mt-4 block text-center text-white font-bold px-5 py-3 transition-colors duration-200"
-         style="background-color:var(--accent); border-radius:var(--radius-btn, 2px); font-family:var(--font-body);">
-        ขอใบเสนอราคาฟรี
+         style="background-color:#166534; border-radius:var(--radius-btn, 2px); font-family:var(--font-body);"> ขอใบเสนอราคาฟรี
       </a>
     </div>
   </div>
